@@ -1,96 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Premium WhatsApp Group Access</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Premium WhatsApp Group Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 420px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #128C7E;
-            font-size: 22px;
-        }
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            font-size: 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .pay {
-            background: #0a7cff;
-            color: #fff;
-        }
-        .confirm {
-            background: #25D366;
-            color: #fff;
-            display: none;
-        }
-        .join {
-            background: #128C7E;
-            color: #fff;
-            display: none;
-            text-decoration: none;
-        }
-        .note {
-            font-size: 13px;
-            color: #666;
-            margin-top: 10px;
-        }
-        img {
-            width: 220px;
-            margin: 10px auto;
-        }
-    </style>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+}
+.container {
+    max-width: 420px;
+    margin: 35px auto;
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+    text-align: center;
+}
+h1 { color: #128C7E; font-size: 22px; }
+.price { font-size: 26px; font-weight: bold; margin: 12px 0; }
+
+.preview {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f9f9;
+}
+.preview img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.preview-text { text-align: left; }
+.preview-text strong { font-size: 15px; }
+.preview-text span { font-size: 12px; color: #666; }
+.lock { font-size: 13px; color: #ff5722; margin-top: 4px; }
+
+.qr img {
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.pay {
+    background: #0a7cff;
+    color: #fff;
+}
+.confirm {
+    background: #ff9800;
+    color: #fff;
+    display: none;
+}
+.join {
+    background: #25D366;
+    color: #fff;
+    display: none;
+    text-decoration: none;
+}
+
+.note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
     <h1>💼 Premium WhatsApp Job Group</h1>
-
-    <p>Verified IT & MBA Jobs | Referrals | Guidance</p>
+    <p>Verified IT & MBA Jobs • Referrals • Career Support</p>
 
     <div class="price">₹299 – Lifetime Access</div>
 
-    <!-- QR CODE IMAGE -->
-    <img src="upi-qr.png" alt="Scan to Pay">
+    <!-- GROUP PREVIEW -->
+    <div class="preview">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+        <div class="preview-text">
+            <strong>Pan India IT & MBA Jobs</strong><br>
+            <span>Premium WhatsApp Community</span>
+            <div class="lock">🔒 Group Locked – Payment Required</div>
+        </div>
+    </div>
 
-    <p><strong>UPI ID:</strong> yourupi@bank</p>
+    <!-- OPTIONAL QR -->
+    <div class="qr">
+        <img src="upi-qr.png" alt="Scan & Pay">
+    </div>
 
     <!-- PAY NOW -->
-    <button class="btn pay" onclick="payNow()">Pay Now</button>
+    <button class="btn pay" onclick="payNow()">
+        Pay Now (UPI App)
+    </button>
 
-    <!-- CONFIRM PAYMENT -->
+    <!-- CONFIRM -->
     <button class="btn confirm" id="confirmBtn" onclick="confirmPayment()">
         I Have Paid
     </button>
 
-    <!-- JOIN GROUP -->
-    <a href="https://chat.whatsapp.com/YOURGROUPLINK"
+    <!-- JOIN -->
+    <a href="https://chat.whatsapp.com/BdHidZQdmQIL7ufNVHtqqz"
        class="btn join"
        id="joinBtn"
        target="_blank">
@@ -98,31 +124,36 @@
     </a>
 
     <p class="note">
-        After payment, click “I Have Paid” to unlock the group link.
+        Pay via UPI app → come back → confirm payment.
+        Refreshing the page locks access again.
     </p>
 </div>
 
 <script>
-    function payNow() {
-        // UPI payment intent (works on mobile)
-        const upiId = "yourupi@bank";
-        const name = "Premium WhatsApp Group";
-        const amount = "299";
+// Reset on refresh
+sessionStorage.clear();
 
-        const upiUrl =
-            `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+function payNow() {
+    const upiId = "nirmal326@icici";        // CHANGE THIS
+    const name = "Premium WhatsApp Group";
+    const amount = "299";
+    const note = "WhatsApp Group Access";
 
-        window.location.href = upiUrl;
+    const upiUrl =
+        `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
 
-        // Show confirmation button
-        document.getElementById("confirmBtn").style.display = "block";
-    }
+    // Open UPI app
+    window.location.href = upiUrl;
 
-    function confirmPayment() {
-        // Basic confirmation (manual)
-        document.getElementById("joinBtn").style.display = "block";
-        alert("Payment received. Click Join WhatsApp Group.");
-    }
+    // Show confirm button only after pay attempt
+    document.getElementById("confirmBtn").style.display = "block";
+}
+
+function confirmPayment() {
+    document.getElementById("joinBtn").style.display = "block";
+    document.getElementById("confirmBtn").disabled = true;
+    document.getElementById("confirmBtn").innerText = "Payment Confirmed";
+}
 </script>
 
 </body>
