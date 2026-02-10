@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premium WhatsApp Group Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #128C7E;
+            font-size: 22px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .pay {
+            background: #0a7cff;
+            color: #fff;
+        }
+        .confirm {
+            background: #25D366;
+            color: #fff;
+            display: none;
+        }
+        .join {
+            background: #128C7E;
+            color: #fff;
+            display: none;
+            text-decoration: none;
+        }
+        .note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+        }
+        img {
+            width: 220px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>💼 Premium WhatsApp Job Group</h1>
+
+    <p>Verified IT & MBA Jobs | Referrals | Guidance</p>
+
+    <div class="price">₹299 – Lifetime Access</div>
+
+    <!-- QR CODE IMAGE -->
+    <img src="upi-qr.png" alt="Scan to Pay">
+
+    <p><strong>UPI ID:</strong> yourupi@bank</p>
+
+    <!-- PAY NOW -->
+    <button class="btn pay" onclick="payNow()">Pay Now</button>
+
+    <!-- CONFIRM PAYMENT -->
+    <button class="btn confirm" id="confirmBtn" onclick="confirmPayment()">
+        I Have Paid
+    </button>
+
+    <!-- JOIN GROUP -->
+    <a href="https://chat.whatsapp.com/YOURGROUPLINK"
+       class="btn join"
+       id="joinBtn"
+       target="_blank">
+        Join WhatsApp Group
+    </a>
+
+    <p class="note">
+        After payment, click “I Have Paid” to unlock the group link.
+    </p>
+</div>
+
+<script>
+    function payNow() {
+        // UPI payment intent (works on mobile)
+        const upiId = "yourupi@bank";
+        const name = "Premium WhatsApp Group";
+        const amount = "299";
+
+        const upiUrl =
+            `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+
+        window.location.href = upiUrl;
+
+        // Show confirmation button
+        document.getElementById("confirmBtn").style.display = "block";
+    }
+
+    function confirmPayment() {
+        // Basic confirmation (manual)
+        document.getElementById("joinBtn").style.display = "block";
+        alert("Payment received. Click Join WhatsApp Group.");
+    }
+</script>
+
+</body>
+</html>
