@@ -1,160 +1,915 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Premium WhatsApp Group Access</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f4f7;
-    margin: 0;
-}
-.container {
-    max-width: 420px;
-    margin: 35px auto;
-    background: #fff;
-    padding: 22px;
-    border-radius: 14px;
-    box-shadow: 0 0 18px rgba(0,0,0,0.12);
-    text-align: center;
-}
-h1 { color: #128C7E; font-size: 22px; }
-.price { font-size: 26px; font-weight: bold; margin: 12px 0; }
-
-.preview {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 14px;
-    margin: 18px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #f9f9f9;
-}
-.preview img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-}
-.preview-text { text-align: left; }
-.preview-text strong { font-size: 15px; }
-.preview-text span { font-size: 12px; color: #666; }
-.lock { font-size: 13px; color: #ff5722; margin-top: 4px; }
-
-.qr img {
-    width: 220px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-.btn {
-    width: 100%;
-    padding: 14px;
-    margin-top: 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.pay {
-    background: #0a7cff;
-    color: #fff;
-}
-.confirm {
-    background: #ff9800;
-    color: #fff;
-    display: none;
-}
-.join {
-    background: #25D366;
-    color: #fff;
-    display: none;
-    text-decoration: none;
-}
-
-.note {
-    font-size: 13px;
-    color: #666;
-    margin-top: 14px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>🎉 5 Years of Trust • Now Going Premium • Exclusive IT & MBA Jobs Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.1"><path d="M0,0 L100,0 L100,100 Z" fill="white"/></svg>');
+            background-size: cover;
+        }
+        
+        .anniversary-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #FF9800, #FF5722);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+            z-index: 2;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 500;
+            z-index: 2;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 30px 25px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid #e0e0e0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: "🎯";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #128C7E;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .offer-banner {
+            background: linear-gradient(135deg, #FF9800, #FF5722);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offer-banner::before {
+            content: "🔥";
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 24px;
+        }
+        
+        .offer-banner::after {
+            content: "⏳";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+        }
+        
+        .offer-banner h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .offer-banner p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .price-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .current-price {
+            font-size: 42px;
+            font-weight: 800;
+            color: #128C7E;
+            margin-bottom: 10px;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .benefits {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 4px solid #25D366;
+        }
+        
+        .benefits h3 {
+            color: #128C7E;
+            margin-bottom: 20px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefit-list {
+            list-style: none;
+        }
+        
+        .benefit-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #dee2e6;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 15px;
+        }
+        
+        .benefit-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .benefit-list i {
+            color: #25D366;
+            font-size: 16px;
+            margin-top: 3px;
+            min-width: 20px;
+        }
+        
+        .steps-container {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #128C7E, #25D366);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+        
+        .step-content p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .form-group input:focus, 
+        .form-group select:focus {
+            border-color: #128C7E;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(18, 140, 126, 0.1);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #128C7E, #25D366);
+            color: white;
+            box-shadow: 0 8px 25px rgba(18, 140, 126, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(18, 140, 126, 0.4);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+            margin-top: 15px;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            background: #f8f9fa;
+        }
+        
+        .footer strong {
+            color: #128C7E;
+        }
+        
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border: 1px solid #c8e6c9;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e3f2fd;
+            color: #1565c0;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin: 5px;
+        }
+        
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .payment-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .payment-option:hover {
+            border-color: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .payment-option.selected {
+            border-color: #128C7E;
+            background: linear-gradient(135deg, rgba(18, 140, 126, 0.05), rgba(37, 211, 102, 0.05));
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.1);
+        }
+        
+        .payment-option i {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: #128C7E;
+        }
+        
+        .payment-option p {
+            font-weight: 700;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .admin-contact {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 25px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .admin-contact h3 {
+            color: #128C7E;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .message-preview {
+            background: white;
+            border: 2px solid #c8e6c9;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: left;
+            white-space: pre-line;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .message-preview h5 {
+            color: #128C7E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 500px) {
+            .container {
+                border-radius: 15px;
+            }
+            
+            .header, .content {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="container">
-    <h1>💼 Premium WhatsApp Job Group</h1>
-    <p>Verified IT & MBA Jobs • Referrals • Career Support</p>
-
-    <div class="price">₹299 – Lifetime Access</div>
-
-    <!-- GROUP PREVIEW -->
-    <div class="preview">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-        <div class="preview-text">
-            <strong>Pan India IT & MBA Jobs</strong><br>
-            <span>Premium WhatsApp Community</span>
-            <div class="lock">🔒 Group Locked – Payment Required</div>
+    <div class="container">
+        <div class="header">
+            <div class="anniversary-badge">
+                <i class="fas fa-trophy"></i> 5 Years
+            </div>
+            
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            
+            <h1>🎉 5 Years of Trust</h1>
+            <p class="subtitle">Now Going Premium. 🚀</p>
+        </div>
+        
+        <div class="content">
+            <div class="highlight-box">
+                <p style="font-size: 15px; line-height: 1.6; color: #444;">
+                    Since <strong>January 2021</strong>, Pan India IT & MBA Job Group has helped <strong>350+ candidates</strong> secure dream jobs through verified openings, insider insights, and genuine referrals across India.
+                </p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">350+</div>
+                    <div class="stat-label">Jobs Secured</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Verified</div>
+                </div>
+            </div>
+            
+            <div class="price-section">
+                <div class="current-price">₹249</div>
+                <div class="price-note">One-time payment • Lifetime Access</div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i> 5 Years Experience • Premium Access
+                </div>
+            </div>
+            
+            <div class="benefits">
+                <h3><i class="fas fa-crown"></i> Premium Benefits</h3>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Pan India IT & MBA Fresher Jobs</strong> – Verified openings within 24-72 hours</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Direct Referrals & Hiring Updates</strong> – Insider access to recruiters</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Admin-Only Group</strong> – No spam, no promotions, pure opportunities</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Career Guidance</strong> – Resume reviews & interview prep</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Exclusive Community</strong> – Network with serious professionals</li>
+                </ul>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Enter Your Details</h4>
+                        <p>Share basic information to get started</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Choose Payment Method</h4>
+                        <p>UPI or WhatsApp payment - both secure</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Get Premium Access</h4>
+                        <p>Receive group link within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="registrationSection">
+                <h3 style="margin-bottom: 20px; color: #128C7E; text-align: center; font-size: 22px;">
+                    <i class="fas fa-user-plus"></i> Join Premium Community
+                </h3>
+                
+                <div class="form-group">
+                    <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your professional email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> WhatsApp Number</label>
+                    <input type="tel" id="phone" placeholder="10-digit WhatsApp number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="profession"><i class="fas fa-briefcase"></i> Current Profession</label>
+                    <select id="profession">
+                        <option value="">Select your profession</option>
+                        <option value="it">IT Professional</option>
+                        <option value="mba">MBA Graduate/Student</option>
+                        <option value="fresher">Fresher/Recent Graduate</option>
+                        <option value="experienced">Experienced Professional</option>
+                        <option value="student">Student (Final Year)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="showPaymentOptions()">
+                    <i class="fas fa-lock"></i> SECURE PAYMENT - ₹249
+                </button>
+                
+                <div style="text-align: center; margin-top: 15px; color: #666; font-size: 13px;">
+                    <i class="fas fa-shield-alt"></i> 100% Secure • No Spam • Money-back Guarantee
+                </div>
+            </div>
+            
+            <div id="paymentSection" style="display: none;">
+                <h3 style="margin-bottom: 20px; color: #128C7E; text-align: center; font-size: 22px;">
+                    <i class="fas fa-credit-card"></i> Complete Your Payment
+                </h3>
+                
+                <div class="payment-options">
+                    <div class="payment-option" onclick="selectPayment('upi')">
+                        <i class="fas fa-qrcode"></i>
+                        <p>UPI / QR Code</p>
+                        <div class="badge">Instant</div>
+                    </div>
+                    
+                    <div class="payment-option" onclick="selectPayment('whatsapp')">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>WhatsApp Payment</p>
+                        <div class="badge">Secure</div>
+                    </div>
+                </div>
+                
+                <div id="upiDetails" style="display: none; margin-top: 20px;">
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; text-align: center;">
+                        <h4><i class="fas fa-qrcode"></i> Scan QR to Pay ₹249</h4>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin: 20px 0; display: inline-block;">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=nirmal326@icici&pn=Premium%20Career%20Group&am=249&cu=INR&tn=5%20Year%20Premium%20Access" 
+                                 alt="QR Code" style="width: 180px; height: 180px; border-radius: 8px;">
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin: 20px 0; font-family: monospace; font-size: 18px; font-weight: 600; border: 2px dashed #128C7E;">
+                            nirmal326@icici
+                        </div>
+                        <button class="btn-secondary" onclick="copyUPI()" style="width: 100%; margin-bottom: 10px;">
+                            <i class="fas fa-copy"></i> Copy UPI ID
+                        </button>
+                        <button class="btn-primary" onclick="openUPIApp()" style="width: 100%;">
+                            <i class="fas fa-external-link-alt"></i> Open UPI App
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="whatsappDetails" style="display: none; margin-top: 20px;">
+                    <div class="admin-contact">
+                        <h3><i class="fab fa-whatsapp"></i> Get Payment Link via WhatsApp</h3>
+                        <p>Our admin will send secure payment link directly to your WhatsApp</p>
+                        
+                        <div class="message-preview">
+                            <h5><i class="fas fa-eye"></i> Message Preview</h5>
+                            <div id="whatsappMessage">Hi Admin, I want to join the Premium Career Group (5 Years Trust). Please send payment link for ₹249.</div>
+                        </div>
+                        
+                        <button class="whatsapp-btn" onclick="contactAdmin('payment_link')">
+                            <i class="fab fa-whatsapp"></i> Request Payment Link
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 10px; padding: 15px; margin: 20px 0; text-align: center;">
+                    <i class="fas fa-camera" style="color: #ff9800;"></i>
+                    <strong style="color: #856404;">Important:</strong> Save payment screenshot for verification
+                </div>
+                
+                <button class="btn btn-primary" onclick="completePayment()" id="completeBtn" style="display: none;">
+                    <i class="fas fa-check-circle"></i> I've Completed Payment
+                </button>
+                
+                <button class="btn-secondary" onclick="backToRegistration()" style="width: 100%; margin-top: 15px;">
+                    <i class="fas fa-arrow-left"></i> Back to Registration
+                </button>
+            </div>
+            
+            <div id="confirmationSection" style="display: none;">
+                <div style="background: linear-gradient(135deg, #d4edda, #c3e6cb); padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 25px;">
+                    <i class="fas fa-check-circle" style="font-size: 48px; color: #155724; margin-bottom: 15px;"></i>
+                    <h3 style="color: #155724; margin-bottom: 10px;">Payment Received!</h3>
+                    <p style="color: #0c5460;">Share payment screenshot to get instant access</p>
+                </div>
+                
+                <div class="admin-contact">
+                    <h3><i class="fas fa-user-tie"></i> Contact Admin for Access</h3>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
+                        <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-user-tie" style="color: #128C7E;"></i>
+                            <span style="font-weight: 600;">Admin: Nirmal</span>
+                        </div>
+                        <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-phone" style="color: #128C7E;"></i>
+                            <span style="font-weight: 600;">+91 82088 82326</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview">
+                        <h5><i class="fas fa-paper-plane"></i> Your Message to Admin</h5>
+                        <div id="finalMessage">Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust). Please send group invite link. Payment screenshot attached.</div>
+                    </div>
+                    
+                    <button class="whatsapp-btn" onclick="contactAdmin('confirmation')">
+                        <i class="fab fa-whatsapp"></i> Share Screenshot & Get Access
+                    </button>
+                    
+                    <a href="https://wa.me/918208882326" class="whatsapp-btn" style="background: linear-gradient(135deg, #128C7E, #075E54); margin-top: 10px;" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Open WhatsApp Directly
+                    </a>
+                </div>
+                
+                <div style="background: #e3f2fd; border: 1px solid #bbdefb; border-radius: 10px; padding: 20px; margin-top: 25px;">
+                    <h4 style="color: #1565c0; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-clock"></i> What Happens Next?
+                    </h4>
+                    <ol style="padding-left: 20px; color: #0d47a1;">
+                        <li style="margin-bottom: 10px;"><strong>Share payment screenshot</strong> with admin via WhatsApp</li>
+                        <li style="margin-bottom: 10px;"><strong>Admin verifies</strong> within 2-4 hours (usually faster)</li>
+                        <li style="margin-bottom: 10px;"><strong>Receive exclusive group link</strong> directly on WhatsApp</li>
+                        <li><strong>Start accessing premium job opportunities</strong> immediately</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="trust-badge" style="margin-bottom: 20px;">
+                <i class="fas fa-star"></i> 5 Years of Trust • 350+ Success Stories
+            </div>
+            <p><strong>📢 Important:</strong> All verified IT & MBA jobs now shared exclusively in premium group</p>
+            <p style="margin-top: 15px; font-size: 13px;">
+                <i class="fas fa-envelope"></i> Support: <a href="mailto:hr.maheshnirmal@gmail.com" style="color: #128C7E; font-weight: 600;">hr.maheshnirmal@gmail.com</a>
+            </p>
         </div>
     </div>
 
-    <!-- OPTIONAL QR -->
-    <div class="qr">
-        <img src="upi-qr.png" alt="Scan & Pay">
-    </div>
-
-    <!-- PAY NOW -->
-    <button class="btn pay" onclick="payNow()">
-        Pay Now (UPI App)
-    </button>
-
-    <!-- CONFIRM -->
-    <button class="btn confirm" id="confirmBtn" onclick="confirmPayment()">
-        I Have Paid
-    </button>
-
-    <!-- JOIN -->
-    <a href="https://chat.whatsapp.com/BdHidZQdmQIL7ufNVHtqqz"
-       class="btn join"
-       id="joinBtn"
-       target="_blank">
-        Join WhatsApp Group
-    </a>
-
-    <p class="note">
-        Pay via UPI app → come back → confirm payment.
-        Refreshing the page locks access again.
-    </p>
-</div>
-
-<script>
-// Reset on refresh
-sessionStorage.clear();
-
-function payNow() {
-    const upiId = "nirmal326@icici";        // CHANGE THIS
-    const name = "Premium WhatsApp Group";
-    const amount = "299";
-    const note = "WhatsApp Group Access";
-
-    const upiUrl =
-        `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
-
-    // Open UPI app
-    window.location.href = upiUrl;
-
-    // Show confirm button only after pay attempt
-    document.getElementById("confirmBtn").style.display = "block";
-}
-
-function confirmPayment() {
-    document.getElementById("joinBtn").style.display = "block";
-    document.getElementById("confirmBtn").disabled = true;
-    document.getElementById("confirmBtn").innerText = "Payment Confirmed";
-}
-</script>
-
+    <script>
+        let userData = {};
+        let selectedPaymentMethod = '';
+        const ADMIN_NUMBER = '918208882326';
+        
+        function showPaymentOptions() {
+            // Collect and validate user data
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim().replace(/\D/g, '');
+            const profession = document.getElementById('profession').value;
+            
+            if (!name || !email || !phone || !profession) {
+                alert('Please fill all fields to proceed with payment.');
+                return;
+            }
+            
+            if (phone.length !== 10) {
+                alert('Please enter a valid 10-digit WhatsApp number.');
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Store user data
+            userData = {
+                name,
+                email,
+                phone,
+                profession,
+                professionText: document.getElementById('profession').options[document.getElementById('profession').selectedIndex].text
+            };
+            
+            // Show payment section
+            document.getElementById('registrationSection').style.display = 'none';
+            document.getElementById('paymentSection').style.display = 'block';
+            document.getElementById('confirmationSection').style.display = 'none';
+            
+            // Update WhatsApp message preview
+            updateMessagePreviews();
+        }
+        
+        function backToRegistration() {
+            document.getElementById('registrationSection').style.display = 'block';
+            document.getElementById('paymentSection').style.display = 'none';
+            document.getElementById('confirmationSection').style.display = 'none';
+        }
+        
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+            
+            // Show selected payment method details
+            document.getElementById('upiDetails').style.display = method === 'upi' ? 'block' : 'none';
+            document.getElementById('whatsappDetails').style.display = method === 'whatsapp' ? 'block' : 'none';
+            document.getElementById('completeBtn').style.display = 'block';
+            
+            // Update message previews
+            updateMessagePreviews();
+        }
+        
+        function updateMessagePreviews() {
+            if (!userData.name) return;
+            
+            // WhatsApp payment link request message
+            const whatsappMessage = `Hi Admin, I want to join the Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPlease send payment link for ₹249.`;
+            document.getElementById('whatsappMessage').textContent = whatsappMessage;
+            
+            // Final confirmation message
+            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPlease send group invite link. Payment screenshot attached.`;
+            document.getElementById('finalMessage').textContent = finalMessage;
+        }
+        
+        function contactAdmin(context) {
+            if (!userData.name) {
+                alert('Please complete registration first.');
+                return;
+            }
+            
+            let message = '';
+            
+            if (context === 'payment_link') {
+                message = `Hi Admin, I want to join the Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPlease send payment link for ₹249.`;
+            } else if (context === 'confirmation') {
+                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPlease send group invite link. Payment screenshot attached.`;
+            }
+            
+            // Open WhatsApp with pre-filled message
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${ADMIN_NUMBER}?text=${encodedMessage}`, '_blank');
+        }
+        
+        function copyUPI() {
+            navigator.clipboard.writeText('nirmal326@icici').then(() => {
+                alert('UPI ID copied to clipboard!');
+            });
+        }
+        
+        function openUPIApp() {
+            const note = `Payment for ${userData.name} - Premium Career Group (5 Years Trust) - ₹249`;
+            const upiUrl = `upi://pay?pa=nirmal326@icici&pn=Premium%20Career%20Group&am=249&cu=INR&tn=${encodeURIComponent(note)}`;
+            window.location.href = upiUrl;
+        }
+        
+        function completePayment() {
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method first.');
+                return;
+            }
+            
+            // Show confirmation section
+            document.getElementById('registrationSection').style.display = 'none';
+            document.getElementById('paymentSection').style.display = 'none';
+            document.getElementById('confirmationSection').style.display = 'block';
+        }
+        
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear form fields
+            document.getElementById('fullName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('profession').value = '';
+        });
+    </script>
 </body>
 </html>
