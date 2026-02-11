@@ -495,6 +495,27 @@
             font-size: 16px;
         }
         
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #128C7E;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            margin-top: 15px;
+            background: white;
+            color: #128C7E;
+        }
+        
+        .btn-secondary:hover {
+            background: #f0f9f8;
+            transform: translateY(-2px);
+        }
+        
         @media (max-width: 500px) {
             .container {
                 border-radius: 15px;
@@ -671,11 +692,24 @@
                     <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; text-align: center;">
                         <h4><i class="fas fa-qrcode"></i> Scan QR to Pay ₹249</h4>
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 20px 0; display: inline-block;">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=nirmal326@icici&pn=Premium%20Career%20Group&am=249&cu=INR&tn=5%20Year%20Premium%20Access" 
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=8208882326@axisbank&pn=M Nirmal Group Admin%20-%20Pan%20India%20IT%20MBA%20Jobs&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs%20-%205%20Year%20Premium%20Access" 
                                  alt="QR Code" style="width: 180px; height: 180px; border-radius: 8px;">
                         </div>
                         <div style="background: white; padding: 15px; border-radius: 10px; margin: 20px 0; font-family: monospace; font-size: 18px; font-weight: 600; border: 2px dashed #128C7E;">
-                            nirmal326@icici
+                            8208882326@axisbank
+                        </div>
+                        <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: left;">
+                            <h5 style="color: #2e7d32; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-info-circle"></i> Payment Details:
+                            </h5>
+                            <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 14px;">
+                                <div style="font-weight: 600; color: #555;">Name:</div>
+                                <div>M Nirmal Group Admin</div>
+                                <div style="font-weight: 600; color: #555;">Amount:</div>
+                                <div>₹249</div>
+                                <div style="font-weight: 600; color: #555;">Remark:</div>
+                                <div>Pan India IT MBA Jobs</div>
+                            </div>
                         </div>
                         <button class="btn-secondary" onclick="copyUPI()" style="width: 100%; margin-bottom: 10px;">
                             <i class="fas fa-copy"></i> Copy UPI ID
@@ -728,7 +762,7 @@
                     <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
                         <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
                             <i class="fas fa-user-tie" style="color: #128C7E;"></i>
-                            <span style="font-weight: 600;">Admin: Nirmal</span>
+                            <span style="font-weight: 600;">Admin: M Nirmal Group Admin</span>
                         </div>
                         <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
                             <i class="fas fa-phone" style="color: #128C7E;"></i>
@@ -739,6 +773,20 @@
                     <div class="message-preview">
                         <h5><i class="fas fa-paper-plane"></i> Your Message to Admin</h5>
                         <div id="finalMessage">Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust). Please send group invite link. Payment screenshot attached.</div>
+                    </div>
+                    
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: left;">
+                        <h5 style="color: #2e7d32; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-credit-card"></i> Payment Details:
+                        </h5>
+                        <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 14px;">
+                            <div style="font-weight: 600; color: #555;">UPI ID:</div>
+                            <div>8208882326@axisbank</div>
+                            <div style="font-weight: 600; color: #555;">Amount:</div>
+                            <div>₹249</div>
+                            <div style="font-weight: 600; color: #555;">Remark:</div>
+                            <div>Pan India IT MBA Jobs</div>
+                        </div>
                     </div>
                     
                     <button class="whatsapp-btn" onclick="contactAdmin('confirmation')">
@@ -850,7 +898,7 @@
             document.getElementById('whatsappMessage').textContent = whatsappMessage;
             
             // Final confirmation message
-            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPlease send group invite link. Payment screenshot attached.`;
+            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nRemark: Pan India IT MBA Jobs\n\nPlease send group invite link. Payment screenshot attached.`;
             document.getElementById('finalMessage').textContent = finalMessage;
         }
         
@@ -865,7 +913,7 @@
             if (context === 'payment_link') {
                 message = `Hi Admin, I want to join the Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPlease send payment link for ₹249.`;
             } else if (context === 'confirmation') {
-                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPlease send group invite link. Payment screenshot attached.`;
+                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\nPayment Method: ${selectedPaymentMethod === 'upi' ? 'UPI' : 'WhatsApp'}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nRemark: Pan India IT MBA Jobs\n\nPlease send group invite link. Payment screenshot attached.`;
             }
             
             // Open WhatsApp with pre-filled message
@@ -874,14 +922,14 @@
         }
         
         function copyUPI() {
-            navigator.clipboard.writeText('nirmal326@icici').then(() => {
+            navigator.clipboard.writeText('8208882326@axisbank').then(() => {
                 alert('UPI ID copied to clipboard!');
             });
         }
         
         function openUPIApp() {
-            const note = `Payment for ${userData.name} - Premium Career Group (5 Years Trust) - ₹249`;
-            const upiUrl = `upi://pay?pa=nirmal326@icici&pn=Premium%20Career%20Group&am=249&cu=INR&tn=${encodeURIComponent(note)}`;
+            const note = `Pan India IT MBA Jobs - ${userData.name} - Premium Career Group (5 Years Trust) - ₹249`;
+            const upiUrl = `upi://pay?pa=8208882326@axisbank&pn=M Nirmal Group Admin%20-%20Pan%20India%20IT%20MBA%20Jobs&am=249&cu=INR&tn=${encodeURIComponent(note)}`;
             window.location.href = upiUrl;
         }
         
