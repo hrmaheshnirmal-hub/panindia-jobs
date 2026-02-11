@@ -445,52 +445,6 @@
             background: #128C7E;
         }
 
-        /* QR Section - CENTERED */
-        .qr-section {
-            text-align: center;
-            padding: 16px;
-            background: #f8f9fa;
-            border-radius: 20px;
-            margin: 20px 0;
-        }
-
-        .qr-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .qr-box {
-            display: inline-block;
-            padding: 12px;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid #e0e0e0;
-            cursor: pointer;
-        }
-
-        .qr-box img {
-            width: 160px;
-            height: 160px;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .qr-hint {
-            font-size: 12px;
-            color: #128C7E;
-            margin-top: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-
         /* Manual Help - COLLAPSIBLE CLEAN */
         .help-section {
             margin: 20px 0;
@@ -583,7 +537,6 @@
             .payment-value { font-size: 14px; }
             .payment-value.amount { font-size: 22px; }
             .upi-id { font-size: 16px; }
-            .qr-box img { width: 140px; height: 140px; }
         }
     </style>
 </head>
@@ -675,7 +628,7 @@
                 </button>
             </div>
 
-            <!-- PAYMENT SECTION - CLEAN & SIMPLE -->
+            <!-- PAYMENT SECTION - DIRECT UPI APP OPEN -->
             <div id="paymentSection" class="hidden">
                 
                 <div class="payment-card">
@@ -685,7 +638,7 @@
                             <i class="fas fa-user-circle"></i>
                         </div>
                         <div class="payee-info">
-                            <h3>MAHI</h3>
+                            <h3>Mahesh Nirmal</h3>
                             <p>Account Holder</p>
                         </div>
                     </div>
@@ -729,9 +682,9 @@
                         </button>
                     </div>
 
-                    <!-- App Buttons - 2x2 Clean Grid -->
+                    <!-- App Buttons - 2x2 Grid - DIRECT APP OPEN -->
                     <h4 style="font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-bolt" style="color: #128C7E;"></i> Pay Directly
+                        <i class="fas fa-bolt" style="color: #128C7E;"></i> Tap to Pay - Enter ₹249 Manually
                     </h4>
                     
                     <div class="app-grid">
@@ -749,21 +702,6 @@
                         </button>
                     </div>
 
-                    <!-- QR Code -->
-                    <div class="qr-section">
-                        <div class="qr-title">
-                            <i class="fas fa-qrcode"></i> Scan & Pay
-                        </div>
-                        <div class="qr-box" onclick="openUPIApp()">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs" 
-                                 alt="QR Code">
-                        </div>
-                        <div class="qr-hint">
-                            <span><i class="fas fa-hand-pointer"></i> Tap QR to pay</span>
-                            <span><i class="fas fa-camera"></i> Scan with camera</span>
-                        </div>
-                    </div>
-
                     <!-- Help Section - Collapsible -->
                     <div class="help-section">
                         <div class="help-header" onclick="toggleHelp()">
@@ -774,11 +712,11 @@
                         </div>
                         <div class="help-content" id="helpContent">
                             <ol>
-                                <li><strong>Open GPay/PhonePe/Paytm</strong></li>
-                                <li><strong>Enter number:</strong> +91 8208882326</li>
-                                <li><strong>Enter amount:</strong> ₹249</li>
+                                <li><strong>Tap any app above</strong> - Opens directly with UPI ID</li>
+                                <li><strong>Enter amount:</strong> ₹249 manually</li>
                                 <li><strong>Add remark:</strong> Pan India IT MBA Jobs</li>
-                                <li><strong>Verify payee:</strong> MAHI</li>
+                                <li><strong>Verify payee:</strong> Mahesh Nirmal</li>
+                                <li><strong>Complete payment</strong> and save screenshot</li>
                             </ol>
                         </div>
                     </div>
@@ -815,7 +753,7 @@
                     
                     <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
                         <div style="background: white; padding: 12px 20px; border-radius: 50px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                            <i class="fas fa-user" style="color: #128C7E;"></i> Admin: MAHI
+                            <i class="fas fa-user" style="color: #128C7E;"></i> Admin: Mahesh Nirmal
                         </div>
                         <div style="background: white; padding: 12px 20px; border-radius: 50px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
                             <i class="fas fa-phone" style="color: #128C7E;"></i> +91 8208882326
@@ -882,28 +820,25 @@
         // Copy UPI ID
         function copyUPI() {
             navigator.clipboard.writeText('8208882326@axisbank').then(() => {
-                alert('✅ UPI ID copied!\n\n8208882326@axisbank\nAmount: ₹249\nPayee: MAHI');
+                alert('✅ UPI ID copied!\n\n8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
             });
         }
 
-        // Open UPI Apps
+        // DIRECT UPI APP OPEN - ONLY UPI ID (MANUAL AMOUNT ENTRY)
         function openUPIApp() {
-            window.location.href = 'upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs';
+            window.location.href = 'upi://pay?pa=8208882326@axisbank';
         }
 
         function openGPay() {
-            window.location.href = 'tez://upi/pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs';
-            setTimeout(() => openUPIApp(), 300);
+            window.location.href = 'tez://upi/pay?pa=8208882326@axisbank';
         }
 
         function openPhonePe() {
-            window.location.href = 'phonepe://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs';
-            setTimeout(() => openUPIApp(), 300);
+            window.location.href = 'phonepe://pay?pa=8208882326@axisbank';
         }
 
         function openPaytm() {
-            window.location.href = 'paytmmp://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs';
-            setTimeout(() => openUPIApp(), 300);
+            window.location.href = 'paytmmp://pay?pa=8208882326@axisbank';
         }
 
         // Toggle Help Section
@@ -926,7 +861,7 @@
             if (context === 'payment_link') {
                 message = `Hi Admin, I want to join the Premium Career Group.\n\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nPlease send payment link for ₹249.`;
             } else {
-                message = `Hi Admin, I've completed payment ₹249.\n\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: MAHI\n\n✅ Payment completed!\n📸 Screenshot attached.\n\nPlease send group invite link.`;
+                message = `Hi Admin, I've completed payment ₹249.\n\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal\n\n✅ Payment completed!\n📸 Screenshot attached.\n\nPlease send group invite link.`;
             }
 
             window.open(`https://wa.me/${ADMIN_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
