@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>🎉 5 Years of Trust • Now Going Premium • Exclusive IT & MBA Jobs Group</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* iOS & Android Optimized Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         
         body {
@@ -19,16 +24,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 12px;
             color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -36,7 +43,7 @@
         .header {
             background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
             color: white;
-            padding: 30px 25px;
+            padding: 28px 22px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -55,135 +62,152 @@
         
         .anniversary-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 16px;
+            right: 16px;
             background: linear-gradient(45deg, #FF9800, #FF5722);
             color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+            box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3);
             z-index: 2;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         
         .logo {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
+            width: 72px;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 36px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 18px;
+            font-size: 32px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
             z-index: 2;
             position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             z-index: 2;
             position: relative;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            letter-spacing: -0.5px;
         }
         
         .subtitle {
-            font-size: 16px;
+            font-size: 15px;
             opacity: 0.95;
             font-weight: 500;
             z-index: 2;
             position: relative;
             max-width: 400px;
             margin: 0 auto;
+            line-height: 1.5;
         }
         
         .content {
-            padding: 30px 25px;
+            padding: 28px 22px;
         }
         
         .highlight-box {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 24px;
+            border: 1px solid #e0e0e0;
             position: relative;
         }
         
         .highlight-box::before {
             content: "🎯";
             position: absolute;
-            top: -15px;
+            top: -14px;
             left: 20px;
             background: white;
-            padding: 0 10px;
-            font-size: 20px;
+            padding: 0 12px;
+            font-size: 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         
         .stats {
             display: flex;
             justify-content: space-around;
-            margin: 25px 0;
+            margin: 20px 0;
             text-align: center;
+            background: white;
+            border-radius: 24px;
+            padding: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
         
         .stat-item {
             flex: 1;
-            padding: 15px;
+            padding: 12px 5px;
         }
         
         .stat-number {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             color: #128C7E;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            line-height: 1.2;
         }
         
         .stat-label {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
         
         .price-section {
             text-align: center;
-            margin: 30px 0;
+            margin: 28px 0;
         }
         
         .current-price {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 800;
             color: #128C7E;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            line-height: 1;
+            letter-spacing: -1px;
         }
         
         .price-note {
             font-size: 14px;
             color: #666;
-            font-weight: 600;
+            font-weight: 500;
         }
         
         .benefits {
             background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-left: 4px solid #25D366;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 24px;
+            border-left: 5px solid #25D366;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
         
         .benefits h3 {
             color: #128C7E;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-size: 20px;
             display: flex;
             align-items: center;
@@ -195,12 +219,13 @@
         }
         
         .benefit-list li {
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px dashed #dee2e6;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 14px;
             font-size: 15px;
+            line-height: 1.4;
         }
         
         .benefit-list li:last-child {
@@ -215,28 +240,29 @@
         }
         
         .steps-container {
-            margin: 30px 0;
+            margin: 28px 0;
         }
         
         .step {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding: 20px;
+            gap: 18px;
+            margin-bottom: 16px;
+            padding: 18px;
             background: #f8f9fa;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
+            border-radius: 18px;
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.03);
         }
         
-        .step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .step:active {
+            transform: scale(0.98);
+            background: #f0f2f5;
         }
         
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             background: linear-gradient(135deg, #128C7E, #25D366);
             color: white;
             border-radius: 50%;
@@ -246,21 +272,24 @@
             font-weight: 800;
             font-size: 20px;
             flex-shrink: 0;
+            box-shadow: 0 8px 15px rgba(18, 140, 126, 0.2);
         }
         
         .step-content h4 {
             color: #333;
-            margin-bottom: 8px;
-            font-size: 17px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 700;
         }
         
         .step-content p {
             color: #666;
             font-size: 14px;
+            line-height: 1.4;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .form-group label {
@@ -277,19 +306,21 @@
         .form-group input, 
         .form-group select {
             width: 100%;
-            padding: 16px;
+            padding: 16px 18px;
             border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border-radius: 16px;
             font-size: 16px;
-            transition: all 0.3s;
+            transition: all 0.2s;
             background: white;
+            -webkit-appearance: none;
+            appearance: none;
         }
         
         .form-group input:focus, 
         .form-group select:focus {
             border-color: #128C7E;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(18, 140, 126, 0.1);
+            box-shadow: 0 0 0 4px rgba(18, 140, 126, 0.1);
         }
         
         .btn {
@@ -297,25 +328,27 @@
             width: 100%;
             padding: 18px;
             border: none;
-            border-radius: 12px;
-            font-size: 18px;
+            border-radius: 50px;
+            font-size: 17px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             text-align: center;
             margin-top: 15px;
             letter-spacing: 0.5px;
+            -webkit-appearance: none;
+            appearance: none;
         }
         
         .btn-primary {
             background: linear-gradient(135deg, #128C7E, #25D366);
             color: white;
-            box-shadow: 0 8px 25px rgba(18, 140, 126, 0.3);
+            box-shadow: 0 10px 25px rgba(18, 140, 126, 0.3);
         }
         
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(18, 140, 126, 0.4);
+        .btn-primary:active {
+            transform: scale(0.97);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
         }
         
         .whatsapp-btn {
@@ -326,34 +359,32 @@
             justify-content: center;
             gap: 12px;
             padding: 18px;
-            border-radius: 12px;
+            border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: all 0.2s;
             width: 100%;
             border: none;
             cursor: pointer;
             font-size: 17px;
             margin-top: 15px;
+            -webkit-appearance: none;
+            appearance: none;
         }
         
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        .whatsapp-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
         
         .footer {
             text-align: center;
-            padding: 25px;
+            padding: 24px;
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
             border-top: 1px solid #eee;
             background: #f8f9fa;
-        }
-        
-        .footer strong {
-            color: #128C7E;
         }
         
         .trust-badge {
@@ -362,144 +393,47 @@
             gap: 8px;
             background: #e8f5e9;
             color: #2e7d32;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 50px;
             font-weight: 600;
             margin-bottom: 15px;
             border: 1px solid #c8e6c9;
+            font-size: 13px;
         }
         
         .badge {
             display: inline-block;
-            padding: 5px 15px;
+            padding: 5px 14px;
             background: #e3f2fd;
             color: #1565c0;
-            border-radius: 20px;
-            font-size: 12px;
+            border-radius: 30px;
+            font-size: 11px;
             font-weight: 700;
             margin: 5px;
-        }
-        
-        .payment-options {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .payment-option {
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            background: white;
-        }
-        
-        .payment-option:hover {
-            border-color: #128C7E;
-            transform: translateY(-3px);
-        }
-        
-        .payment-option.selected {
-            border-color: #128C7E;
-            background: linear-gradient(135deg, rgba(18, 140, 126, 0.05), rgba(37, 211, 102, 0.05));
-            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.1);
-        }
-        
-        .payment-option i {
-            font-size: 32px;
-            margin-bottom: 12px;
-            color: #128C7E;
-        }
-        
-        .payment-option p {
-            font-weight: 700;
-            font-size: 16px;
-            color: #333;
-        }
-        
-        .admin-contact {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 25px;
-            border: 2px solid #dee2e6;
-        }
-        
-        .admin-contact h3 {
-            color: #128C7E;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        
-        .message-preview {
-            background: white;
-            border: 2px solid #c8e6c9;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            font-size: 14px;
-            text-align: left;
-            white-space: pre-line;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        
-        .message-preview h5 {
-            color: #128C7E;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px;
-        }
-        
-        .btn-secondary {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            border: 2px solid #128C7E;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-            margin-top: 15px;
-            background: white;
-            color: #128C7E;
-        }
-        
-        .btn-secondary:hover {
-            background: #f0f9f8;
-            transform: translateY(-2px);
-        }
-        
-        .payment-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            border: 2px solid #e0e0e0;
         }
         
         .payment-header {
             background: linear-gradient(135deg, #128C7E, #075E54);
             color: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin: -40px 0 20px 0;
+            padding: 24px 20px;
+            border-radius: 24px;
+            margin: -45px 0 25px 0;
             text-align: center;
-            box-shadow: 0 8px 15px rgba(18,140,126,0.2);
+            box-shadow: 0 15px 25px rgba(18,140,126,0.25);
+        }
+        
+        .payment-card {
+            background: white;
+            border-radius: 24px;
+            padding: 25px 22px;
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border: 1px solid #e0e0e0;
         }
         
         .payment-details-box {
             background: #f8f9fa;
-            border-radius: 12px;
+            border-radius: 20px;
             padding: 20px;
             margin: 15px 0;
             border: 2px dashed #128C7E;
@@ -509,7 +443,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid #e0e0e0;
         }
         
@@ -523,6 +457,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 15px;
         }
         
         .detail-value {
@@ -532,28 +467,29 @@
         }
         
         .upi-number {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
             color: #128C7E;
             letter-spacing: 1px;
             background: white;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 16px;
+            border-radius: 16px;
             border: 2px solid #25D366;
             text-align: center;
-            margin: 10px 0;
+            margin: 15px 0;
+            word-break: break-all;
         }
         
         .app-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .app-btn {
-            padding: 15px;
-            border-radius: 12px;
+            padding: 16px 12px;
+            border-radius: 18px;
             border: none;
             font-weight: 600;
             display: flex;
@@ -561,119 +497,260 @@
             justify-content: center;
             gap: 10px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             font-size: 15px;
+            color: white;
+            -webkit-appearance: none;
+            appearance: none;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .app-btn:active {
+            transform: scale(0.96);
+            opacity: 0.9;
         }
         
         .gpay-btn {
             background: #4285F4;
-            color: white;
         }
         
         .phonepe-btn {
             background: #5F259F;
-            color: white;
         }
         
         .paytm-btn {
             background: #00B9F1;
-            color: white;
-        }
-        
-        .app-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
         
         .qr-section {
             text-align: center;
             padding: 20px;
             background: white;
-            border-radius: 12px;
+            border-radius: 20px;
             margin: 20px 0;
+            border: 1px solid #e0e0e0;
         }
         
         .qr-box {
             background: white;
             padding: 15px;
-            border-radius: 12px;
+            border-radius: 18px;
             display: inline-block;
             border: 2px solid #e0e0e0;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        .qr-box:hover {
+        .qr-box:active {
             border-color: #128C7E;
-            transform: scale(1.02);
+            transform: scale(0.98);
+            box-shadow: 0 8px 20px rgba(18,140,126,0.2);
         }
         
         .qr-box img {
-            width: 180px;
-            height: 180px;
-            border-radius: 8px;
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            display: block;
         }
         
         .help-box {
             background: #fff3e0;
-            border-left: 5px solid #ff9800;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
+            border-left: 6px solid #ff9800;
+            padding: 22px;
+            border-radius: 18px;
+            margin: 25px 0;
         }
         
         .copy-btn {
             background: #e8f5e9;
             color: #2e7d32;
             border: 2px solid #2e7d32;
-            padding: 12px 20px;
+            padding: 16px 20px;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
             justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
             font-size: 16px;
+            -webkit-appearance: none;
+            appearance: none;
         }
         
-        .copy-btn:hover {
+        .copy-btn:active {
             background: #2e7d32;
             color: white;
+            transform: scale(0.97);
         }
         
-        @media (max-width: 500px) {
-            .container {
-                border-radius: 15px;
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #128C7E;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            margin-top: 15px;
+            background: white;
+            color: #128C7E;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .btn-secondary:active {
+            background: #128C7E;
+            color: white;
+            transform: scale(0.97);
+        }
+        
+        .admin-contact {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 25px 22px;
+            border-radius: 24px;
+            text-align: center;
+            margin-top: 25px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .message-preview {
+            background: white;
+            border: 2px solid #c8e6c9;
+            border-radius: 18px;
+            padding: 18px;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: left;
+            white-space: pre-line;
+            max-height: 200px;
+            overflow-y: auto;
+            line-height: 1.5;
+        }
+        
+        /* iOS Specific Optimizations */
+        @supports (-webkit-touch-callout: none) {
+            .btn, .app-btn, .copy-btn, .whatsapp-btn, .btn-secondary, .qr-box {
+                -webkit-touch-callout: none;
+                -webkit-tap-highlight-color: transparent;
             }
             
-            .header, .content {
-                padding: 25px 20px;
+            .step:active {
+                background: #e9ecef;
+            }
+            
+            body {
+                padding-bottom: 20px;
+            }
+        }
+        
+        /* Android Specific Optimizations */
+        @supports (-webkit-appearance: none) and (not (-webkit-touch-callout: none)) {
+            .btn, .app-btn, .copy-btn, .whatsapp-btn, .btn-secondary {
+                border-width: 0;
+            }
+        }
+        
+        /* Responsive Breakpoints */
+        @media (max-width: 380px) {
+            .content {
+                padding: 22px 18px;
             }
             
             h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
             
-            .payment-options {
-                grid-template-columns: 1fr;
+            .logo {
+                width: 64px;
+                height: 64px;
+                font-size: 28px;
             }
             
-            .stats {
-                flex-direction: column;
-                gap: 15px;
+            .current-price {
+                font-size: 40px;
+            }
+            
+            .stat-number {
+                font-size: 22px;
             }
             
             .step {
-                flex-direction: column;
-                text-align: center;
+                padding: 15px;
+            }
+            
+            .step-number {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
             }
             
             .app-buttons {
                 grid-template-columns: 1fr;
             }
+            
+            .qr-box img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .upi-number {
+                font-size: 16px;
+                padding: 14px;
+            }
+        }
+        
+        @media (min-width: 481px) {
+            .container {
+                margin: 20px auto;
+            }
+            
+            .qr-box img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #0a1a1f 0%, #1a2e35 50%, #1f3a42 100%);
+            }
+        }
+        
+        /* Safe Area Support for Notch */
+        @supports (padding: max(0px)) {
+            .container {
+                border-radius: max(28px, env(safe-area-inset-top));
+            }
+            
+            .content {
+                padding-left: max(22px, env(safe-area-inset-left));
+                padding-right: max(22px, env(safe-area-inset-right));
+            }
+        }
+        
+        /* Smooth Scrolling */
+        .content, .message-preview {
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Better Touch Targets */
+        .btn, .app-btn, .copy-btn, .whatsapp-btn, .btn-secondary, .qr-box, .step, .payment-option {
+            min-height: 50px;
+            touch-action: manipulation;
+        }
+        
+        /* Hide Focus Outline on Touch */
+        .btn:focus, .app-btn:focus, .copy-btn:focus, .whatsapp-btn:focus, .btn-secondary:focus {
+            outline: none;
         }
     </style>
 </head>
@@ -760,23 +837,23 @@
             </div>
             
             <div id="registrationSection">
-                <h3 style="margin-bottom: 20px; color: #128C7E; text-align: center; font-size: 22px;">
+                <h3 style="margin-bottom: 20px; color: #128C7E; text-align: center; font-size: 22px; font-weight: 700;">
                     <i class="fas fa-user-plus"></i> Join Premium Community
                 </h3>
                 
                 <div class="form-group">
                     <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
-                    <input type="text" id="fullName" placeholder="Enter your full name">
+                    <input type="text" id="fullName" placeholder="Enter your full name" inputmode="text" autocomplete="name">
                 </div>
                 
                 <div class="form-group">
                     <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your professional email">
+                    <input type="email" id="email" placeholder="Enter your professional email" inputmode="email" autocomplete="email">
                 </div>
                 
                 <div class="form-group">
                     <label for="phone"><i class="fas fa-phone"></i> WhatsApp Number</label>
-                    <input type="tel" id="phone" placeholder="10-digit WhatsApp number">
+                    <input type="tel" id="phone" placeholder="10-digit WhatsApp number" inputmode="numeric" autocomplete="tel" maxlength="10" pattern="[0-9]*">
                 </div>
                 
                 <div class="form-group">
@@ -796,58 +873,58 @@
                     <i class="fas fa-lock"></i> PROCEED TO PAYMENT - ₹249
                 </button>
                 
-                <div style="text-align: center; margin-top: 15px; color: #666; font-size: 13px;">
+                <div style="text-align: center; margin-top: 18px; color: #666; font-size: 12px;">
                     <i class="fas fa-shield-alt"></i> 100% Secure • No Spam • Money-back Guarantee
                 </div>
             </div>
             
             <div id="paymentSection" style="display: none;">
                 <div class="payment-header">
-                    <i class="fas fa-credit-card" style="font-size: 32px; margin-bottom: 10px;"></i>
-                    <h2 style="margin-bottom: 5px;">Pay ₹249 & Get Premium Access</h2>
-                    <p style="opacity: 0.9;">One-time payment • Lifetime membership</p>
+                    <i class="fas fa-credit-card" style="font-size: 32px; margin-bottom: 12px;"></i>
+                    <h2 style="margin-bottom: 6px; font-size: 24px; font-weight: 700;">Pay ₹249</h2>
+                    <p style="opacity: 0.9; font-size: 15px;">One-time payment • Lifetime membership</p>
                 </div>
                 
                 <!-- Payment Details Card -->
                 <div class="payment-card">
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <div style="background: #e8f5e9; padding: 15px; border-radius: 50%;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div style="background: #e8f5e9; padding: 14px; border-radius: 50%;">
                             <i class="fas fa-user-circle" style="font-size: 32px; color: #128C7E;"></i>
                         </div>
                         <div>
-                            <h3 style="color: #128C7E; margin-bottom: 5px;">Mahesh Nirmal</h3>
-                            <p style="color: #666; font-size: 14px;">Account Holder Name</p>
+                            <h3 style="color: #128C7E; margin-bottom: 4px; font-size: 20px; font-weight: 700;">MAHI</h3>
+                            <p style="color: #666; font-size: 13px;">Account Holder Name</p>
                         </div>
                     </div>
                     
                     <div class="payment-details-box">
                         <div class="detail-row">
-                            <span class="detail-label"><i class="fas fa-user"></i> Payee Name:</span>
-                            <span class="detail-value">Mahesh Nirmal</span>
+                            <span class="detail-label"><i class="fas fa-user"></i> Payee:</span>
+                            <span class="detail-value" style="font-weight: 800;">MAHI</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label"><i class="fas fa-qrcode"></i> UPI ID:</span>
-                            <span class="detail-value" style="font-size: 18px;">8208882326@axisbank</span>
+                            <span class="detail-value" style="font-size: 17px; font-weight: 800;">8208882326@axisbank</span>
                         </div>
                         <div class="detail-row">
-                            <span class="detail-label"><i class="fas fa-mobile-alt"></i> GPay/PhonePe No:</span>
-                            <span class="detail-value" style="font-size: 18px;">+91 8208882326</span>
+                            <span class="detail-label"><i class="fas fa-mobile-alt"></i> GPay/PhonePe:</span>
+                            <span class="detail-value" style="font-size: 17px; font-weight: 800;">+91 8208882326</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label"><i class="fas fa-rupee-sign"></i> Amount:</span>
-                            <span class="detail-value" style="font-size: 24px; color: #25D366;">₹249</span>
+                            <span class="detail-value" style="font-size: 26px; color: #25D366; font-weight: 800;">₹249</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label"><i class="fas fa-tag"></i> Remark:</span>
-                            <span class="detail-value">Pan India IT MBA Jobs</span>
+                            <span class="detail-value" style="font-weight: 600;">Pan India IT MBA Jobs</span>
                         </div>
                     </div>
                     
-                    <!-- UPI Number Big Display -->
+                    <!-- UPI Number Big Display - iOS & Android Optimized -->
                     <div style="margin: 20px 0;">
-                        <div style="background: #e8f5e9; padding: 5px; border-radius: 50px; margin-bottom: 10px;">
-                            <div style="background: white; padding: 15px; border-radius: 50px; border: 2px solid #25D366;">
-                                <span style="font-size: 24px; font-weight: 800; color: #128C7E; letter-spacing: 2px;">8208882326@axisbank</span>
+                        <div style="background: #e8f5e9; padding: 4px; border-radius: 18px;">
+                            <div style="background: white; padding: 16px; border-radius: 16px; border: 2px solid #25D366;">
+                                <span style="font-size: 20px; font-weight: 800; color: #128C7E; letter-spacing: 1px; word-break: break-all;">8208882326@axisbank</span>
                             </div>
                         </div>
                         <button class="copy-btn" onclick="copyUPI()">
@@ -855,9 +932,9 @@
                         </button>
                     </div>
                     
-                    <!-- Direct App Buttons -->
+                    <!-- Direct App Buttons - iOS & Android Optimized -->
                     <div style="margin: 25px 0;">
-                        <h4 style="margin-bottom: 15px; color: #333; display: flex; align-items: center; gap: 10px;">
+                        <h4 style="margin-bottom: 16px; color: #333; display: flex; align-items: center; gap: 10px; font-size: 17px;">
                             <i class="fas fa-bolt" style="color: #128C7E;"></i> Pay Directly with UPI Apps
                         </h4>
                         <div class="app-buttons">
@@ -870,127 +947,114 @@
                             <button class="app-btn paytm-btn" onclick="openPaytm()">
                                 <i class="fas fa-rupee-sign"></i> Paytm
                             </button>
-                            <button class="app-btn" style="background: #128C7E; color: white;" onclick="openUPIApp()">
+                            <button class="app-btn" style="background: #128C7E;" onclick="openUPIApp()">
                                 <i class="fas fa-qrcode"></i> Other UPI
                             </button>
                         </div>
-                        <p style="font-size: 12px; color: #666; margin-top: 10px; text-align: center;">
-                            <i class="fas fa-info-circle"></i> Click any app to pay directly - Amount ₹249 will be auto-filled
+                        <p style="font-size: 12px; color: #666; margin-top: 12px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Tap any app - Amount ₹249 & details auto-filled
                         </p>
                     </div>
                     
-                    <!-- QR Code Section -->
+                    <!-- QR Code Section - Clickable & Scalable -->
                     <div class="qr-section">
-                        <h4 style="margin-bottom: 15px; color: #333;">
+                        <h4 style="margin-bottom: 16px; color: #333; font-size: 17px;">
                             <i class="fas fa-qrcode"></i> Scan QR Code to Pay
                         </h4>
                         <div class="qr-box" onclick="openUPIApp()">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs" 
-                                 alt="QR Code - Scan to Pay ₹249">
-                            <div style="font-size: 13px; color: #128C7E; margin-top: 10px;">
-                                <i class="fas fa-hand-pointer"></i> Click to pay • Scan with camera
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs" 
+                                 alt="QR Code - Scan to Pay ₹249"
+                                 loading="lazy">
+                            <div style="font-size: 13px; color: #128C7E; margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <i class="fas fa-hand-pointer"></i> Tap to pay
+                                <span style="width: 4px; height: 4px; background: #128C7E; border-radius: 50%; display: inline-block;"></span>
+                                <i class="fas fa-camera"></i> Scan with camera
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Help Box for Manual Payment -->
+                    <!-- Help Box for Manual Payment - Mobile Optimized -->
                     <div class="help-box">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
                             <i class="fas fa-lightbulb" style="color: #ff9800; font-size: 24px;"></i>
-                            <h5 style="color: #e65100; font-size: 16px; margin: 0;">Having trouble? Pay manually:</h5>
+                            <h5 style="color: #e65100; font-size: 16px; margin: 0; font-weight: 700;">Having trouble? Pay manually:</h5>
                         </div>
-                        <ol style="margin-left: 20px; color: #e65100; font-weight: 500;">
-                            <li style="margin-bottom: 10px;">Open <strong>GPay / PhonePe / Paytm</strong> app</li>
-                            <li style="margin-bottom: 10px;">Enter number: <strong>+91 8208882326</strong> or UPI ID: <strong>8208882326@axisbank</strong></li>
-                            <li style="margin-bottom: 10px;">Enter amount: <strong>₹249</strong></li>
-                            <li style="margin-bottom: 10px;">Add remark: <strong>Pan India IT MBA Jobs</strong></li>
-                            <li>Verify payee name: <strong>Mahesh Nirmal</strong> and send payment</li>
+                        <ol style="margin-left: 20px; color: #e65100; font-weight: 500; font-size: 14px; line-height: 1.6;">
+                            <li style="margin-bottom: 12px;">Open <strong>GPay / PhonePe / Paytm</strong> app</li>
+                            <li style="margin-bottom: 12px;">Enter number: <strong style="font-size: 15px;">+91 8208882326</strong></li>
+                            <li style="margin-bottom: 12px;">Enter amount: <strong style="font-size: 18px;">₹249</strong></li>
+                            <li style="margin-bottom: 12px;">Add remark: <strong>Pan India IT MBA Jobs</strong></li>
+                            <li>Verify payee: <strong>MAHI</strong> & send payment</li>
                         </ol>
                     </div>
                     
                     <!-- WhatsApp Payment Option -->
                     <div style="margin-top: 25px;">
                         <button class="whatsapp-btn" onclick="contactAdmin('payment_link')">
-                            <i class="fab fa-whatsapp"></i> Need Help? Get Payment Link on WhatsApp
+                            <i class="fab fa-whatsapp" style="font-size: 20px;"></i> Need Help? Get Payment Link
                         </button>
                     </div>
                     
                     <!-- Screenshot Reminder -->
-                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 10px; padding: 15px; margin: 20px 0; text-align: center;">
-                        <i class="fas fa-camera" style="color: #ff9800; font-size: 18px;"></i>
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 16px; padding: 16px; margin: 20px 0; text-align: center; font-size: 14px;">
+                        <i class="fas fa-camera" style="color: #ff9800; font-size: 16px;"></i>
                         <strong style="color: #856404;"> Important:</strong> Save payment screenshot for verification
                     </div>
                     
-                    <button class="btn btn-primary" onclick="completePayment()" id="completeBtn">
-                        <i class="fas fa-check-circle"></i> I'VE COMPLETED PAYMENT - VERIFY NOW
+                    <button class="btn btn-primary" onclick="completePayment()" id="completeBtn" style="font-size: 18px; padding: 18px;">
+                        <i class="fas fa-check-circle"></i> I'VE COMPLETED PAYMENT
                     </button>
                     
-                    <button class="btn-secondary" onclick="backToRegistration()" style="margin-top: 10px;">
+                    <button class="btn-secondary" onclick="backToRegistration()" style="margin-top: 12px;">
                         <i class="fas fa-arrow-left"></i> Back to Registration
                     </button>
                 </div>
             </div>
             
             <div id="confirmationSection" style="display: none;">
-                <div style="background: linear-gradient(135deg, #d4edda, #c3e6cb); padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 25px;">
-                    <i class="fas fa-check-circle" style="font-size: 48px; color: #155724; margin-bottom: 15px;"></i>
-                    <h3 style="color: #155724; margin-bottom: 10px;">Payment Initiated!</h3>
-                    <p style="color: #0c5460;">Share payment screenshot to get instant access</p>
+                <div style="background: linear-gradient(135deg, #d4edda, #c3e6cb); padding: 28px 22px; border-radius: 24px; text-align: center; margin-bottom: 25px;">
+                    <i class="fas fa-check-circle" style="font-size: 56px; color: #155724; margin-bottom: 15px;"></i>
+                    <h3 style="color: #155724; margin-bottom: 8px; font-size: 24px; font-weight: 700;">Payment Initiated!</h3>
+                    <p style="color: #0c5460; font-size: 15px;">Share payment screenshot to get instant access</p>
                 </div>
                 
                 <div class="admin-contact">
-                    <h3><i class="fas fa-user-tie"></i> Contact Admin for Access</h3>
+                    <h3 style="font-size: 20px; margin-bottom: 20px;"><i class="fas fa-user-tie"></i> Contact Admin</h3>
                     <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
-                        <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                        <div style="background: white; padding: 12px 18px; border-radius: 50px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                             <i class="fas fa-user-tie" style="color: #128C7E;"></i>
-                            <span style="font-weight: 600;">Admin: Mahesh Nirmal</span>
+                            <span style="font-weight: 700;">Admin: MAHI</span>
                         </div>
-                        <div style="background: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                        <div style="background: white; padding: 12px 18px; border-radius: 50px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                             <i class="fas fa-phone" style="color: #128C7E;"></i>
-                            <span style="font-weight: 600;">+91 8208882326</span>
+                            <span style="font-weight: 700;">+91 8208882326</span>
                         </div>
                     </div>
                     
                     <div class="message-preview">
-                        <h5><i class="fas fa-paper-plane"></i> Your Message to Admin</h5>
-                        <div id="finalMessage">Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust). Please send group invite link. Payment screenshot attached.</div>
-                    </div>
-                    
-                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin: 15px 0; text-align: left;">
-                        <h5 style="color: #2e7d32; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-credit-card"></i> Payment Summary:
+                        <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 15px;">
+                            <i class="fas fa-paper-plane" style="color: #128C7E;"></i> Your Message to Admin
                         </h5>
-                        <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 14px;">
-                            <div style="font-weight: 600; color: #555;">Payee:</div>
-                            <div>Mahesh Nirmal</div>
-                            <div style="font-weight: 600; color: #555;">UPI ID:</div>
-                            <div>8208882326@axisbank</div>
-                            <div style="font-weight: 600; color: #555;">Mobile:</div>
-                            <div>+91 8208882326</div>
-                            <div style="font-weight: 600; color: #555;">Amount:</div>
-                            <div>₹249</div>
-                            <div style="font-weight: 600; color: #555;">Remark:</div>
-                            <div>Pan India IT MBA Jobs</div>
-                        </div>
+                        <div id="finalMessage" style="font-size: 14px; line-height: 1.6;"></div>
                     </div>
                     
-                    <button class="whatsapp-btn" onclick="contactAdmin('confirmation')">
-                        <i class="fab fa-whatsapp"></i> 📤 SHARE SCREENSHOT & GET ACCESS
+                    <button class="whatsapp-btn" onclick="contactAdmin('confirmation')" style="font-size: 17px;">
+                        <i class="fab fa-whatsapp" style="font-size: 20px;"></i> SHARE SCREENSHOT & GET ACCESS
                     </button>
                     
-                    <a href="https://wa.me/918208882326" class="whatsapp-btn" style="background: linear-gradient(135deg, #128C7E, #075E54); margin-top: 10px;" target="_blank">
+                    <a href="https://wa.me/918208882326" class="whatsapp-btn" style="background: linear-gradient(135deg, #128C7E, #075E54); margin-top: 12px;" target="_blank">
                         <i class="fab fa-whatsapp"></i> Open WhatsApp Directly
                     </a>
                 </div>
                 
-                <div style="background: #e3f2fd; border: 1px solid #bbdefb; border-radius: 10px; padding: 20px; margin-top: 25px;">
-                    <h4 style="color: #1565c0; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <div style="background: #e3f2fd; border: 1px solid #bbdefb; border-radius: 20px; padding: 22px; margin-top: 25px;">
+                    <h4 style="color: #1565c0; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; font-size: 18px;">
                         <i class="fas fa-clock"></i> What Happens Next?
                     </h4>
-                    <ol style="padding-left: 20px; color: #0d47a1;">
-                        <li style="margin-bottom: 10px;"><strong>Share payment screenshot</strong> with admin via WhatsApp</li>
-                        <li style="margin-bottom: 10px;"><strong>Admin verifies</strong> within 2-4 hours (usually faster)</li>
-                        <li style="margin-bottom: 10px;"><strong>Receive exclusive group link</strong> directly on WhatsApp</li>
+                    <ol style="padding-left: 22px; color: #0d47a1; font-size: 14px; line-height: 1.7;">
+                        <li style="margin-bottom: 12px;"><strong>Share payment screenshot</strong> with admin via WhatsApp</li>
+                        <li style="margin-bottom: 12px;"><strong>Admin verifies</strong> within 2-4 hours (usually faster)</li>
+                        <li style="margin-bottom: 12px;"><strong>Receive exclusive group link</strong> directly on WhatsApp</li>
                         <li><strong>Start accessing premium job opportunities</strong> immediately</li>
                     </ol>
                 </div>
@@ -998,11 +1062,11 @@
         </div>
         
         <div class="footer">
-            <div class="trust-badge" style="margin-bottom: 20px;">
+            <div class="trust-badge" style="margin-bottom: 18px;">
                 <i class="fas fa-star"></i> 5 Years of Trust • 350+ Success Stories
             </div>
-            <p><strong>📢 Important:</strong> All verified IT & MBA jobs now shared exclusively in premium group</p>
-            <p style="margin-top: 15px; font-size: 13px;">
+            <p style="font-size: 13px; line-height: 1.5;"><strong>📢 Important:</strong> All verified IT & MBA jobs now shared exclusively in premium group</p>
+            <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">
                 <i class="fas fa-envelope"></i> Support: hr.maheshnirmal@gmail.com
             </p>
         </div>
@@ -1013,6 +1077,11 @@
         let selectedPaymentMethod = '';
         const ADMIN_NUMBER = '918208882326';
         
+        // Detect iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        // Detect Android
+        const isAndroid = /Android/.test(navigator.userAgent);
+        
         function showPaymentOptions() {
             // Collect and validate user data
             const name = document.getElementById('fullName').value.trim();
@@ -1021,17 +1090,17 @@
             const profession = document.getElementById('profession').value;
             
             if (!name || !email || !phone || !profession) {
-                alert('Please fill all fields to proceed with payment.');
+                alert('📝 Please fill all fields to proceed with payment.');
                 return;
             }
             
             if (phone.length !== 10) {
-                alert('Please enter a valid 10-digit WhatsApp number.');
+                alert('📱 Please enter a valid 10-digit WhatsApp number.');
                 return;
             }
             
             if (!validateEmail(email)) {
-                alert('Please enter a valid email address.');
+                alert('📧 Please enter a valid email address.');
                 return;
             }
             
@@ -1067,7 +1136,7 @@
             document.getElementById('whatsappMessage').textContent = whatsappMessage;
             
             // Final confirmation message
-            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
+            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: MAHI\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
             document.getElementById('finalMessage').textContent = finalMessage;
         }
         
@@ -1082,7 +1151,7 @@
             if (context === 'payment_link') {
                 message = `Hi Admin, I want to join the Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPlease send payment link for ₹249.`;
             } else if (context === 'confirmation') {
-                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
+                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: MAHI\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
             }
             
             const encodedMessage = encodeURIComponent(message);
@@ -1091,49 +1160,64 @@
         
         function copyUPI() {
             navigator.clipboard.writeText('8208882326@axisbank').then(() => {
-                alert('✅ UPI ID copied to clipboard!\n\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
+                alert('✅ UPI ID copied!\n\nUPI: 8208882326@axisbank\nAmount: ₹249\nPayee: MAHI');
+            }).catch(() => {
+                // Fallback for older devices
+                alert('UPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: MAHI');
             });
         }
         
         function openUPIApp() {
-            const upiUrl = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const upiUrl = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = upiUrl;
+            
+            // Fallback for iOS
+            if (isIOS) {
+                setTimeout(function() {
+                    window.location.href = 'https://apps.apple.com/in/app/google-pay/id1133332795';
+                }, 800);
+            }
         }
         
         function openGPay() {
-            // Google Pay intent
-            const gpayUrl = `tez://upi/pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            // Google Pay intent for both platforms
+            const gpayUrl = `tez://upi/pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = gpayUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
-            }, 500);
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            }, 300);
         }
         
         function openPhonePe() {
             // PhonePe intent
-            const phonepeUrl = `phonepe://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const phonepeUrl = `phonepe://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = phonepeUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
-            }, 500);
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            }, 300);
         }
         
         function openPaytm() {
             // Paytm intent
-            const paytmUrl = `paytmmp://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const paytmUrl = `paytmmp://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = paytmUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
-            }, 500);
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            }, 300);
         }
         
         function completePayment() {
+            if (!userData.name) {
+                alert('Please complete registration first.');
+                return;
+            }
+            
             // Show confirmation section
             document.getElementById('registrationSection').style.display = 'none';
             document.getElementById('paymentSection').style.display = 'none';
@@ -1155,6 +1239,21 @@
             document.getElementById('email').value = '';
             document.getElementById('phone').value = '';
             document.getElementById('profession').value = '';
+            
+            // Add platform-specific class
+            if (isIOS) {
+                document.body.classList.add('ios-device');
+            }
+            if (isAndroid) {
+                document.body.classList.add('android-device');
+            }
+        });
+        
+        // Prevent zoom on input focus for iOS
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.nodeName === 'INPUT' || e.target.nodeName === 'SELECT') {
+                e.target.style.fontSize = '16px';
+            }
         });
     </script>
 </body>
