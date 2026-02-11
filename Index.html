@@ -892,7 +892,7 @@
                             <i class="fas fa-user-circle" style="font-size: 32px; color: #128C7E;"></i>
                         </div>
                         <div>
-                            <h3 style="color: #128C7E; margin-bottom: 4px; font-size: 20px; font-weight: 700;">MAHI</h3>
+                            <h3 style="color: #128C7E; margin-bottom: 4px; font-size: 20px; font-weight: 700;">Mahesh Nirmal</h3>
                             <p style="color: #666; font-size: 13px;">Account Holder Name</p>
                         </div>
                     </div>
@@ -900,7 +900,7 @@
                     <div class="payment-details-box">
                         <div class="detail-row">
                             <span class="detail-label"><i class="fas fa-user"></i> Payee:</span>
-                            <span class="detail-value" style="font-weight: 800;">MAHI</span>
+                            <span class="detail-value" style="font-weight: 800;">Mahesh Nirmal</span>
                         </div>
                         <div class="detail-row">
                             <span class="detail-label"><i class="fas fa-qrcode"></i> UPI ID:</span>
@@ -962,7 +962,7 @@
                             <i class="fas fa-qrcode"></i> Scan QR Code to Pay
                         </h4>
                         <div class="qr-box" onclick="openUPIApp()">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs" 
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs" 
                                  alt="QR Code - Scan to Pay ₹249"
                                  loading="lazy">
                             <div style="font-size: 13px; color: #128C7E; margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px;">
@@ -984,7 +984,7 @@
                             <li style="margin-bottom: 12px;">Enter number: <strong style="font-size: 15px;">+91 8208882326</strong></li>
                             <li style="margin-bottom: 12px;">Enter amount: <strong style="font-size: 18px;">₹249</strong></li>
                             <li style="margin-bottom: 12px;">Add remark: <strong>Pan India IT MBA Jobs</strong></li>
-                            <li>Verify payee: <strong>MAHI</strong> & send payment</li>
+                            <li>Verify payee: <strong>Mahesh Nirmal</strong> & send payment</li>
                         </ol>
                     </div>
                     
@@ -1023,7 +1023,7 @@
                     <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
                         <div style="background: white; padding: 12px 18px; border-radius: 50px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                             <i class="fas fa-user-tie" style="color: #128C7E;"></i>
-                            <span style="font-weight: 700;">Admin: MAHI</span>
+                            <span style="font-weight: 700;">Admin: Mahesh Nirmal</span>
                         </div>
                         <div style="background: white; padding: 12px 18px; border-radius: 50px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                             <i class="fas fa-phone" style="color: #128C7E;"></i>
@@ -1136,7 +1136,7 @@
             document.getElementById('whatsappMessage').textContent = whatsappMessage;
             
             // Final confirmation message
-            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: MAHI\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
+            const finalMessage = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
             document.getElementById('finalMessage').textContent = finalMessage;
         }
         
@@ -1151,7 +1151,7 @@
             if (context === 'payment_link') {
                 message = `Hi Admin, I want to join the Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPlease send payment link for ₹249.`;
             } else if (context === 'confirmation') {
-                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: MAHI\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
+                message = `Hi Admin, I've completed payment ₹249 for Premium Career Group (5 Years Trust).\n\nMy Details:\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\nProfession: ${userData.professionText}\n\nPayment Details:\nUPI ID: 8208882326@axisbank\nMobile: +91 8208882326\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Pan India IT MBA Jobs\n\n✅ Payment completed successfully!\n📸 Payment screenshot attached.\n\nPlease send group invite link.`;
             }
             
             const encodedMessage = encodeURIComponent(message);
@@ -1160,15 +1160,15 @@
         
         function copyUPI() {
             navigator.clipboard.writeText('8208882326@axisbank').then(() => {
-                alert('✅ UPI ID copied!\n\nUPI: 8208882326@axisbank\nAmount: ₹249\nPayee: MAHI');
+                alert('✅ UPI ID copied!\n\nUPI: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
             }).catch(() => {
                 // Fallback for older devices
-                alert('UPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: MAHI');
+                alert('UPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
             });
         }
         
         function openUPIApp() {
-            const upiUrl = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const upiUrl = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = upiUrl;
             
             // Fallback for iOS
@@ -1181,34 +1181,34 @@
         
         function openGPay() {
             // Google Pay intent for both platforms
-            const gpayUrl = `tez://upi/pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const gpayUrl = `tez://upi/pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = gpayUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             }, 300);
         }
         
         function openPhonePe() {
             // PhonePe intent
-            const phonepeUrl = `phonepe://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const phonepeUrl = `phonepe://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = phonepeUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             }, 300);
         }
         
         function openPaytm() {
             // Paytm intent
-            const paytmUrl = `paytmmp://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+            const paytmUrl = `paytmmp://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             window.location.href = paytmUrl;
             
             // Fallback
             setTimeout(function() {
-                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=MAHI&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
+                window.location.href = `upi://pay?pa=8208882326@axisbank&pn=Mahesh Nirmal&am=249&cu=INR&tn=Pan%20India%20IT%20MBA%20Jobs`;
             }, 300);
         }
         
