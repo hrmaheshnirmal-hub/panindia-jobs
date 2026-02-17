@@ -2,664 +2,498 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Premium Jobs Community • 5 Years Trust</title>
+    <title>Premium Pan India IT & Non-IT WhatsApp Job group • 5 Years Trust</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Font Awesome 6 (latest) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter (modern) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
-        /* Mobile First - Clean & Simple */
+        /* ---------- ULTRA MODERN, TRUST LAYER – NO FAKE VIBE, ADVANCED FEATURES (no AI buzzwords) ---------- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* light/dark variables */
+        :root {
+            --bg-page: #eef4f3;
+            --bg-container: #ffffff;
+            --primary: #0b6b5f;
+            --primary-dark: #064e45;
+            --primary-soft: #e0f2ef;
+            --text-dark: #1d2f2c;
+            --text-soft: #3f5a55;
+            --border-light: #cee3df;
+            --shadow: 0 25px 45px -12px rgba(6, 60, 50, 0.25);
+            --card-bg: #f9fdfc;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
+        body.dark {
+            --bg-page: #0c1e1b;
+            --bg-container: #1c312e;
+            --primary: #31a592;
+            --primary-dark: #249e8a;
+            --primary-soft: #1f4741;
+            --text-dark: #e2f0ed;
+            --text-soft: #b0d3cc;
+            --border-light: #3f6b63;
+            --card-bg: #243b37;
+            --shadow: 0 25px 45px -8px rgba(0, 0, 0, 0.6);
         }
 
         body {
-            background: #0b1a1f;
+            background: var(--bg-page);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 12px;
             min-height: 100vh;
+            transition: background 0.2s;
         }
 
         .container {
             width: 100%;
-            max-width: 400px;
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 420px;
+            background: var(--bg-container);
+            border-radius: 36px;
+            box-shadow: var(--shadow), 0 0 0 1px rgba(18, 140, 126, 0.2);
             overflow: hidden;
+            position: relative;
+            transition: background 0.2s;
         }
 
-        /* Header - Professional, minimal */
-        .header {
-            background: linear-gradient(145deg, #0f3b3b, #0a2b2b);
+        /* dark mode toggle – advanced UX */
+        .theme-toggle {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            z-index: 50;
+            background: var(--primary-soft);
+            width: 44px;
+            height: 44px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            backdrop-filter: blur(4px);
+        }
+
+        /* floating smart assistant (non‑AI, just quick actions) */
+        .smart-float {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 200;
+        }
+
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 30px;
+            background: var(--primary);
             color: white;
-            padding: 30px 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 10px 20px rgba(0,60,50,0.4);
+            border: 2px solid white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .float-btn.whatsapp-float {
+            background: var(--whatsapp);
+        }
+
+        .float-btn:active { transform: scale(0.9); }
+
+        /* quick assist card (appears on click) */
+        .quick-assist {
+            position: fixed;
+            bottom: 160px;
+            right: 20px;
+            width: 280px;
+            background: var(--bg-container);
+            border-radius: 28px;
+            border: 1px solid var(--primary);
+            box-shadow: 0 20px 30px rgba(0,30,20,0.3);
+            overflow: hidden;
+            display: none;
+            z-index: 250;
+        }
+
+        .quick-assist.show { display: block; }
+
+        .assist-header {
+            background: var(--primary);
+            color: white;
+            padding: 14px 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .assist-options {
+            padding: 10px;
+        }
+
+        .assist-option {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        .assist-option:active { background: var(--primary-soft); }
+        .assist-option i { color: var(--primary); width: 24px; }
+
+        /* header */
+        .header {
+            background: linear-gradient(145deg, var(--primary), #064e45);
+            color: white;
+            padding: 32px 20px 28px;
             text-align: center;
-            position: relative;
         }
 
         .profile-icon {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 16px;
-            background: #e0f2f1;
+            width: 96px; height: 96px;
+            margin: 0 auto 18px;
+            background: #f0fcf9;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 3px solid #26a69a;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 4px solid #b3e6de;
+            box-shadow: 0 8px 0 #0a554b;
         }
 
-        .profile-icon i {
-            font-size: 48px;
-            color: #0f3b3b;
-        }
+        .profile-icon i { font-size: 52px; color: var(--primary); }
 
         h1 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            letter-spacing: -0.5px;
+            font-size: 26px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.4px;
         }
 
         .subtitle {
-            font-size: 15px;
-            opacity: 0.95;
             background: rgba(255,255,255,0.15);
             padding: 8px 18px;
             border-radius: 40px;
             display: inline-block;
-            margin-top: 8px;
-            font-weight: 500;
-        }
-
-        /* Content */
-        .content {
-            padding: 24px 20px;
-        }
-
-        /* Stats - unchanged, core trust signals */
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 12px;
-            margin-bottom: 24px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 22px;
-            font-weight: 800;
-            color: #128C7E;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: #666;
             font-weight: 600;
-            margin-top: 2px;
-        }
-
-        /* Price - updated to ₹249 */
-        .price-section {
-            text-align: center;
-            margin-bottom: 24px;
-            background: #e8f0fe;
-            border-radius: 60px;
-            padding: 16px 12px;
-            border: 1px solid #90a4ae;
-        }
-
-        .current-price {
-            font-size: 48px;
-            font-weight: 800;
-            color: #1f2d3d;
-            line-height: 1;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .price-note {
-            font-size: 15px;
-            color: #1e3a5f;
-            font-weight: 600;
-            margin-top: 8px;
-            background: #d1e0f0;
-            display: inline-block;
-            padding: 6px 20px;
-            border-radius: 50px;
-        }
-
-        /* Benefits */
-        .benefits {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 24px;
-        }
-
-        .benefits h3 {
-            color: #128C7E;
-            font-size: 18px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .benefit-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .benefit-list li:last-child {
-            border-bottom: none;
-        }
-
-        .benefit-list i {
-            color: #25D366;
-            font-size: 14px;
-            margin-top: 3px;
-        }
-
-        /* Steps */
-        .step {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: #f8f9fa;
-            border-radius: 18px;
-            padding: 16px;
-            margin-bottom: 12px;
-        }
-
-        .step-number {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(145deg, #128C7E, #25D366);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .step-content h4 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .step-content p {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Form */
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 6px;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 16px;
-            border: 1.5px solid #e0e0e0;
-            border-radius: 16px;
-            font-size: 15px;
-            background: white;
-            -webkit-appearance: none;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            border-color: #128C7E;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(18,140,126,0.1);
-        }
-
-        /* Buttons */
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 18px;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s;
-            -webkit-appearance: none;
-        }
-
-        .btn-primary {
-            background: #128C7E;
-            color: white;
-            box-shadow: 0 8px 15px rgba(18,140,126,0.2);
-        }
-
-        .btn-primary:active {
-            background: #0e6a5e;
-            transform: scale(0.98);
-        }
-
-        /* Payment Card */
-        .payment-card {
-            background: white;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 10px 0;
-            border: 1px solid #e0e0e0;
-        }
-
-        .payee-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #f0f0f0;
-            margin-bottom: 16px;
-        }
-
-        .payee-icon {
-            width: 48px;
-            height: 48px;
-            background: #e8f5e9;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .payee-icon i {
-            font-size: 24px;
-            color: #128C7E;
-        }
-
-        .payee-info h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #128C7E;
-            margin-bottom: 2px;
-        }
-
-        .payee-info p {
-            font-size: 12px;
-            color: #666;
-        }
-
-        /* Payment Details Grid */
-        .payment-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        .payment-item {
-            background: #f8f9fa;
-            border-radius: 16px;
-            padding: 14px;
-        }
-
-        .payment-item.full-width {
-            grid-column: span 2;
-        }
-
-        .payment-label {
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .payment-value {
-            font-size: 16px;
-            font-weight: 700;
-            color: #128C7E;
-            word-break: break-word;
-        }
-
-        .payment-value.amount {
-            font-size: 24px;
-            color: #1f2d3d;
-        }
-
-        .payment-value.small {
-            font-size: 14px;
-        }
-
-        /* UPI Box */
-        .upi-box {
-            background: #e8f5e9;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 20px;
-            border: 1px solid #c8e6c9;
-        }
-
-        .upi-id {
-            font-size: 18px;
-            font-weight: 800;
-            color: #128C7E;
-            text-align: center;
-            word-break: break-all;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-
-        .copy-btn {
-            width: 100%;
-            padding: 14px;
-            background: white;
-            border: 2px solid #128C7E;
-            border-radius: 50px;
-            color: #128C7E;
-            font-weight: 700;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .copy-btn:active {
-            background: #128C7E;
-            color: white;
-        }
-
-        /* App Buttons */
-        .app-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 20px 0;
-        }
-
-        .app-btn {
-            padding: 14px;
-            border-radius: 16px;
-            border: none;
-            font-weight: 600;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: white;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .app-btn:active {
-            transform: scale(0.96);
-            opacity: 0.9;
-        }
-
-        .gpay { background: #4285F4; }
-        .phonepe { background: #5F259F; }
-        .paytm { background: #00B9F1; }
-        .other-upi { background: #128C7E; }
-
-        /* Help Section */
-        .help-section {
-            margin: 20px 0;
-            border: 1px solid #cfd8dc;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .help-header {
-            background: #eceff1;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .help-header h4 {
-            font-size: 15px;
-            font-weight: 600;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .help-content {
-            background: white;
-            padding: 16px;
-            border-top: 1px solid #cfd8dc;
-            display: none;
-        }
-
-        .help-content.show {
-            display: block;
-        }
-
-        .help-content ol {
-            margin-left: 20px;
-            font-size: 14px;
-            color: #37474f;
-            line-height: 1.6;
-        }
-
-        .help-content li {
-            margin-bottom: 12px;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            width: 100%;
-            padding: 16px;
-            background: #25D366;
-            border: none;
-            border-radius: 50px;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            cursor: pointer;
-            margin: 16px 0;
-        }
-
-        .whatsapp-btn:active {
-            background: #128C7E;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #666;
-        }
-
-        /* Hidden Sections */
-        .hidden {
-            display: none;
+            backdrop-filter: blur(5px);
         }
 
         .info-line {
-            background: #e0f2f1;
-            color: #00695c;
-            padding: 8px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 16px;
-            text-align: center;
+            background: #c7ede7; color: #004d42; padding: 10px 18px; border-radius: 40px; font-size: 14px; font-weight: 600; margin-top: 20px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #56b6a8;
         }
 
-        @media (max-width: 380px) {
-            .content { padding: 20px 16px; }
-            .payment-grid { gap: 12px; }
-            .payment-value { font-size: 14px; }
-            .payment-value.amount { font-size: 22px; }
-            .upi-id { font-size: 16px; }
+        /* stats */
+        .stats {
+            display: flex; justify-content: space-around; background: var(--card-bg); border-radius: 28px; padding: 16px 8px; margin: 24px 20px 20px; border: 1px solid var(--border-light);
         }
+
+        .stat-number { font-size: 24px; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 11px; color: var(--text-soft); font-weight: 600; }
+
+        /* images section - dynamic placeholders with modern look */
+        .images-section {
+            margin: 0 20px 24px; background: var(--card-bg); border-radius: 30px; padding: 20px 16px; border: 1px solid var(--border-light); box-shadow: 0 6px 0 rgba(0,90,80,0.1);
+        }
+
+        .images-section h3 { color: var(--primary); font-size: 18px; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; font-weight: 700; }
+
+        .image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        .image-card {
+            background: var(--bg-container); border-radius: 24px; overflow: hidden; border: 1px solid var(--border-light);
+        }
+
+        .image-placeholder {
+            width: 100%; background: var(--primary-soft); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--primary); font-weight: 600; aspect-ratio: 1/1.1; border-bottom: 1px solid var(--border-light);
+        }
+
+        .image-placeholder i { font-size: 42px; margin-bottom: 8px; opacity: 0.8; }
+
+        .image-card p { padding: 12px 6px; font-size: 13px; font-weight: 600; color: var(--text-dark); text-align: center; background: var(--card-bg); }
+
+        .card-footer { padding: 0 8px 14px; background: var(--card-bg); display: flex; justify-content: center; }
+
+        .join-link {
+            display: inline-flex; align-items: center; gap: 6px; background: var(--whatsapp); color: white; text-decoration: none; padding: 10px 18px; border-radius: 40px; font-size: 14px; font-weight: 700; box-shadow: 0 5px 0 #1a8f4a; border: 1px solid #7eedb3;
+        }
+
+        .join-link:active { transform: translateY(3px); box-shadow: 0 2px 0 #1a8f4a; }
+
+        /* price */
+        .price-section {
+            text-align: center; margin: 0 20px 20px; background: var(--primary-soft); border-radius: 70px; padding: 16px 12px; border: 2px solid var(--primary); box-shadow: inset 0 2px 6px rgba(255,255,255,0.8), 0 6px 0 var(--primary-dark);
+        }
+
+        .current-price { font-size: 54px; font-weight: 800; color: var(--primary-dark); line-height: 1; }
+        .price-note { font-size: 15px; color: var(--primary-dark); font-weight: 600; background: #ffffffc0; padding: 5px 18px; border-radius: 50px; display: inline-block; }
+
+        /* smart profile score (advanced, but not AI, just rule‑based) */
+        .profile-score {
+            background: var(--card-bg); border-radius: 50px; padding: 14px 20px; margin: 0 20px 24px; display: flex; align-items: center; gap: 15px; border: 1px solid var(--primary); box-shadow: 0 3px 0 var(--primary);
+        }
+
+        .score-circle {
+            width: 60px; height: 60px; border-radius: 50%; background: conic-gradient(var(--primary) 0deg, var(--primary-soft) 0deg); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: var(--primary-dark); background: white; border: 3px solid var(--primary);
+        }
+
+        .score-text { font-size: 14px; color: var(--text-dark); font-weight: 500; flex: 1; }
+
+        /* benefits */
+        .benefits {
+            background: var(--card-bg); border-radius: 28px; padding: 20px 18px; margin: 0 20px 20px; border: 1px solid var(--border-light);
+        }
+
+        .benefits h3 { color: var(--primary); font-size: 18px; margin-bottom: 16px; }
+        .benefit-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-light); font-size: 14.5px; color: var(--text-dark); }
+        .benefit-list i { color: var(--primary); }
+
+        .step {
+            display: flex; align-items: center; gap: 16px; background: var(--card-bg); border-radius: 26px; padding: 16px; margin: 0 20px 16px; border: 1px solid var(--border-light);
+        }
+
+        .step-number {
+            width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 22px; box-shadow: 0 5px 0 var(--primary-dark);
+        }
+
+        .form-group { margin: 0 20px 16px; }
+
+        .form-group label {
+            display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%; padding: 17px 18px; border: 2px solid var(--border-light); border-radius: 28px; font-size: 15px; background: var(--bg-container); color: var(--text-dark);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--primary); box-shadow: 0 0 0 4px rgba(18,140,126,0.15); outline: none;
+        }
+
+        .btn-primary {
+            background: var(--primary); color: white; box-shadow: 0 8px 0 var(--primary-dark); border: none; width: calc(100% - 40px); margin: 12px 20px 24px; padding: 18px; border-radius: 60px; font-weight: 800; font-size: 17px; transition: 0.08s;
+        }
+
+        .btn-primary:active { transform: translateY(5px); box-shadow: 0 3px 0 var(--primary-dark); }
+
+        /* payment card */
+        .payment-card {
+            background: var(--card-bg); border-radius: 34px; padding: 22px 18px; margin: 8px 16px 20px; border: 1px solid var(--border-light); box-shadow: 0 12px 0 rgba(0,0,0,0.08);
+        }
+
+        .payee-row { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 2px solid var(--border-light); margin-bottom: 20px; }
+        .payee-icon { width: 60px; height: 60px; background: var(--primary-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary); }
+        .payee-icon i { font-size: 30px; color: var(--primary); }
+        .payee-info h3 { font-size: 20px; font-weight: 800; color: var(--primary-dark); }
+
+        .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+        .payment-item { background: var(--bg-container); border-radius: 22px; padding: 14px 12px; border: 1px solid var(--border-light); }
+        .payment-label { font-size: 10px; color: var(--text-soft); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+        .payment-value { font-weight: 800; color: var(--primary-dark); word-break: break-word; }
+        .payment-value.amount { font-size: 26px; color: var(--primary-dark); }
+
+        .upi-box { background: var(--primary-soft); border-radius: 28px; padding: 18px; margin-bottom: 22px; border: 2px solid var(--primary); }
+        .upi-id { font-size: 19px; font-weight: 800; color: var(--primary-dark); text-align: center; }
+        .copy-btn {
+            width: 100%; padding: 15px; background: white; border: 2px solid var(--primary); border-radius: 60px; color: var(--primary); font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px;
+        }
+
+        .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        .app-btn {
+            padding: 15px; border-radius: 30px; border: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; color: white; box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+        }
+        .app-btn:active { transform: translateY(3px); }
+        .gpay { background: #4285F4; } .phonepe { background: #5F259F; } .paytm { background: #00B9F1; } .other-upi { background: var(--primary); }
+
+        .whatsapp-btn {
+            width: 100%; padding: 18px; background: var(--whatsapp); border: none; border-radius: 60px; color: white; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 8px 0 #1a8f4a; margin: 12px 0;
+        }
+
+        .footer {
+            text-align: center; padding: 22px 16px; background: var(--card-bg); border-top: 1px solid var(--border-light); font-size: 13px; color: var(--text-soft);
+        }
+
+        .hidden { display: none; }
+
+        .dark .profile-icon i { color: #0b3d3a; }
+        .dark .join-link { box-shadow: 0 5px 0 #0e6e3f; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header: Clean, professional, no religious symbols/emojis -->
+        <!-- theme toggle (advanced) -->
+        <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </div>
+
+        <!-- header -->
         <div class="header">
             <div class="profile-icon">
-                <i class="fas fa-briefcase"></i>
+                <i class="fas fa-badge-check"></i>
             </div>
-            <h1>Premium Jobs Community</h1>
+            <h1>Premium Pan India IT & Non-IT WhatsApp Job group</h1>
             <p class="subtitle">5 Years of Trust • 350+ Placements</p>
             <div class="info-line">
-                <i class="fas fa-check-circle"></i> Verified openings · Direct referrals
+                <i class="fas fa-shield-alt"></i> Verified by active recruiters
             </div>
         </div>
 
         <div class="content">
-            <!-- Stats unchanged -->
+            <!-- stats -->
             <div class="stats">
                 <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">YEARS</div></div>
-                <div class="stat-item"><div class="stat-number">350+</div><div class="stat-label">JOBS</div></div>
+                <div class="stat-item"><div class="stat-number">350+</div><div class="stat-label">PLACED</div></div>
                 <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">VERIFIED</div></div>
             </div>
 
-            <!-- Price updated to ₹249, no offer text -->
-            <div class="price-section">
-                <span class="current-price">₹249</span>
-                <div class="price-note">lifetime access · one-time</div>
+            <!-- DYNAMIC PROFILE SCORE (smart, rule‑based, not AI) -->
+            <div class="profile-score" id="profileScoreCard">
+                <div class="score-circle" id="scoreCircle">0</div>
+                <div class="score-text" id="scoreText">Fill your details to see your profile strength & job match.</div>
             </div>
 
-            <!-- Registration Section -->
+            <!-- images section (modern) -->
+            <div class="images-section">
+                <h3><i class="fas fa-camera-retro"></i> Live updates</h3>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <div class="image-placeholder"><i class="fas fa-user-tie"></i><span>📸 Get your job</span></div>
+                        <p>🎉 350+ professionals placed</p>
+                        <div class="card-footer">
+                            <a href="#" class="join-link" onclick="event.preventDefault(); alert('🔒 WhatsApp group preview (real invite after payment)');"><i class="fab fa-whatsapp"></i> Preview</a>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-placeholder"><i class="fas fa-calendar-alt"></i><span>📢 active daily</span></div>
+                        <p>Premium jobs · fresher to director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- price definitive -->
+            <div class="price-section">
+                <span class="current-price">₹249</span>
+                <div class="price-note">lifetime · one-time fee</div>
+            </div>
+
+            <!-- registration section -->
             <div id="registrationSection">
                 <div class="benefits">
                     <h3><i class="fas fa-crown"></i> Premium Benefits</h3>
                     <ul class="benefit-list">
                         <li><i class="fas fa-check-circle"></i> <strong>Pan India IT & MBA Jobs</strong> – Verified openings</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Direct Referrals</strong> – Insider access</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Admin-Only Group</strong> – No spam</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Direct Referrals</strong> – Insider access (HR posts)</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Admin-Only Group</strong> – Strictly no spam</li>
                         <li><i class="fas fa-check-circle"></i> <strong>Career Guidance</strong> – Resume & interview prep</li>
                     </ul>
                 </div>
 
-                <div class="step"><div class="step-number">1</div><div class="step-content"><h4>Enter Your Details</h4><p>Fill your information below</p></div></div>
+                <div class="step"><div class="step-number">1</div><div class="step-content"><h4>Enter Your Details</h4><p>secure & private</p></div></div>
 
-                <div class="form-group"><label><i class="fas fa-user"></i> Full Name</label><input type="text" id="fullName" placeholder="Enter your full name"></div>
-                <div class="form-group"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="email" placeholder="Enter your email"></div>
-                <div class="form-group"><label><i class="fas fa-phone"></i> WhatsApp Number</label><input type="tel" id="phone" placeholder="10-digit number" maxlength="10"></div>
+                <div class="form-group"><label><i class="fas fa-user"></i> Full Name</label><input type="text" id="fullName" placeholder="e.g. Rahul Sharma" oninput="updateScore()"></div>
+                <div class="form-group"><label><i class="fas fa-envelope"></i> Email</label><input type="email" id="email" placeholder="you@example.com" oninput="updateScore()"></div>
+                <div class="form-group"><label><i class="fas fa-phone"></i> WhatsApp Number</label><input type="tel" id="phone" placeholder="10-digit mobile" maxlength="10" oninput="updateScore()"></div>
                 <div class="form-group"><label><i class="fas fa-briefcase"></i> Profession</label>
-                    <select id="profession"><option value="">Select profession</option><option value="it">Experienced</option><option value="fresher">Fresher</option><option value="hiring">Hiring Manager</option><option value="student">Pursuing Student</option></select>
+                    <select id="profession" onchange="updateScore()">
+                        <option value="">Select profession</option>
+                        <option value="it">Experienced (IT)</option>
+                        <option value="nonit">Experienced (Non-IT)</option>
+                        <option value="fresher">Fresher</option>
+                        <option value="hiring">Hiring Manager</option>
+                        <option value="student">Pursuing Student</option>
+                    </select>
                 </div>
 
                 <button class="btn btn-primary" onclick="showPayment()"><i class="fas fa-lock"></i> CONTINUE TO PAYMENT (₹249)</button>
             </div>
 
-            <!-- PAYMENT SECTION updated to ₹249 -->
+            <!-- payment section -->
             <div id="paymentSection" class="hidden">
                 <div class="payment-card">
-                    <div class="payee-row">
-                        <div class="payee-icon"><i class="fas fa-user-circle"></i></div>
-                        <div class="payee-info"><h3>Mahesh Nirmal</h3><p>Account Holder</p></div>
-                    </div>
-
+                    <div class="payee-row"><div class="payee-icon"><i class="fas fa-user-tie"></i></div><div class="payee-info"><h3>Mahesh Nirmal</h3><p>Group admin · 5+ yrs</p></div></div>
                     <div class="payment-grid">
-                        <div class="payment-item"><div class="payment-label"><i class="fas fa-qrcode"></i> UPI ID</div><div class="payment-value small">8208882326@axisbank</div></div>
-                        <div class="payment-item"><div class="payment-label"><i class="fas fa-mobile-alt"></i> GPay/PhonePe</div><div class="payment-value small">+91 8208882326</div></div>
-                        <div class="payment-item"><div class="payment-label"><i class="fas fa-rupee-sign"></i> Amount</div><div class="payment-value amount">₹249</div></div>
-                        <div class="payment-item"><div class="payment-label"><i class="fas fa-tag"></i> Remark</div><div class="payment-value small">Premium IT MBA</div></div>
+                        <div class="payment-item"><div class="payment-label">UPI ID</div><div class="payment-value">8208882326@axisbank</div></div>
+                        <div class="payment-item"><div class="payment-label">Gpay/PhonePe</div><div class="payment-value">+91 8208882326</div></div>
+                        <div class="payment-item"><div class="payment-label">Amount</div><div class="payment-value amount">₹249</div></div>
+                        <div class="payment-item"><div class="payment-label">Remark</div><div class="payment-value">Premium IT MBA</div></div>
                     </div>
-
-                    <div class="upi-box">
-                        <div class="upi-id">8208882326@axisbank</div>
-                        <button class="copy-btn" onclick="copyUPI()"><i class="fas fa-copy"></i> Copy UPI ID</button>
-                    </div>
-
-                    <h4 style="font-size: 15px; margin-bottom: 12px;"><i class="fas fa-bolt" style="color: #128C7E;"></i> Tap & Pay ₹249 (enter manually)</h4>
-                    
+                    <div class="upi-box"><div class="upi-id">8208882326@axisbank</div><button class="copy-btn" onclick="copyUPI()"><i class="fas fa-copy"></i> Copy UPI ID</button></div>
                     <div class="app-grid">
                         <button class="app-btn gpay" onclick="openGPay()"><i class="fab fa-google-pay"></i> GPay</button>
                         <button class="app-btn phonepe" onclick="openPhonePe()"><i class="fas fa-mobile-alt"></i> PhonePe</button>
                         <button class="app-btn paytm" onclick="openPaytm()"><i class="fas fa-rupee-sign"></i> Paytm</button>
                         <button class="app-btn other-upi" onclick="openUPIApp()"><i class="fas fa-qrcode"></i> Other UPI</button>
                     </div>
-
-                    <div class="help-section">
-                        <div class="help-header" onclick="toggleHelp()"><h4><i class="fas fa-lightbulb"></i> Manual Payment Guide</h4><i class="fas fa-chevron-down" id="helpIcon"></i></div>
-                        <div class="help-content" id="helpContent"><ol><li><strong>Tap any app above</strong> – Opens with UPI ID</li><li><strong>Enter amount:</strong> ₹249</li><li><strong>Add remark:</strong> Premium IT MBA</li><li><strong>Verify payee:</strong> Mahesh Nirmal</li><li><strong>Complete payment</strong> and save screenshot</li></ol></div>
-                    </div>
-
-                    <button class="whatsapp-btn" onclick="contactAdmin('payment_link')"><i class="fab fa-whatsapp"></i> Need Help? Get Payment Link</button>
-                    <button class="btn btn-primary" onclick="completePayment()"><i class="fas fa-check-circle"></i> I've Completed Payment (₹249)</button>
-                    <button class="btn" onclick="backToRegistration()" style="background: white; color: #128C7E; border: 2px solid #128C7E; margin-top: 12px;"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="whatsapp-btn" onclick="contactAdmin('payment_link')"><i class="fab fa-whatsapp"></i> Need payment link? (admin)</button>
+                    <button class="btn btn-primary" onclick="completePayment()" style="margin:0 0 12px 0; width:100%"><i class="fas fa-check-circle"></i> I've Completed Payment</button>
+                    <button class="btn" onclick="backToRegistration()" style="background:white; color:var(--primary); border:2px solid var(--primary); width:100%; padding:16px; border-radius:60px;"><i class="fas fa-arrow-left"></i> Back</button>
                 </div>
             </div>
 
-            <!-- Confirmation Section (unchanged except amount in message) -->
+            <!-- confirmation section -->
             <div id="confirmationSection" class="hidden">
-                <div style="background: #d4edda; padding: 24px; border-radius: 20px; text-align: center; margin-bottom: 20px;">
-                    <i class="fas fa-check-circle" style="font-size: 56px; color: #155724; margin-bottom: 12px;"></i>
-                    <h3 style="color: #155724;">Payment Initiated!</h3>
-                    <p style="color: #0c5460;">Share screenshot to get access</p>
+                <div style="background: var(--primary-soft); padding: 28px 16px; border-radius: 36px; text-align: center; margin: 20px;">
+                    <i class="fas fa-check-circle" style="font-size: 68px; color: var(--primary-dark);"></i>
+                    <h3 style="color: var(--primary-dark);">Payment recorded</h3>
+                    <p style="color: var(--text-dark);">Share screenshot to get instant access.</p>
                 </div>
-                <div style="background: #f8f9fa; padding: 24px; border-radius: 20px;">
-                    <h3 style="color: #128C7E; margin-bottom: 16px;"><i class="fas fa-user-tie"></i> Contact Admin</h3>
-                    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
-                        <div style="background: white; padding: 12px 20px; border-radius: 50px;"><i class="fas fa-user" style="color: #128C7E;"></i> Mahesh Nirmal</div>
-                        <div style="background: white; padding: 12px 20px; border-radius: 50px;"><i class="fas fa-phone" style="color: #128C7E;"></i> +91 8208882326</div>
+                <div style="background: var(--card-bg); padding:26px; border-radius:32px; margin:20px;">
+                    <h3 style="color: var(--primary-dark); margin-bottom:20px;"><i class="fas fa-user-tie"></i> Admin contact</h3>
+                    <div style="display:flex; justify-content:center; gap:16px; margin-bottom:25px; flex-wrap:wrap;">
+                        <span style="background:var(--bg-container); padding:10px 24px; border-radius:40px;"><i class="fas fa-user" style="color:var(--primary);"></i> Mahesh Nirmal</span>
+                        <span style="background:var(--bg-container); padding:10px 24px; border-radius:40px;"><i class="fas fa-phone" style="color:var(--primary);"></i> +91 8208882326</span>
                     </div>
                     <button class="whatsapp-btn" onclick="contactAdmin('confirmation')"><i class="fab fa-whatsapp"></i> Share Screenshot & Get Access</button>
-                    <a href="https://wa.me/918208882326" class="btn" style="background: #128C7E; color: white; text-decoration: none; margin-top: 12px;" target="_blank"><i class="fab fa-whatsapp"></i> Open WhatsApp</a>
-                    <button class="btn" onclick="backToRegistration()" style="background: white; color: #128C7E; border: 2px solid #128C7E; margin-top: 16px;"><i class="fas fa-arrow-left"></i> Back</button>
+                    <a href="https://wa.me/918208882326" class="btn" style="background:var(--primary); color:white; display:block; text-align:center; padding:16px; border-radius:60px; margin-top:16px; text-decoration:none;" target="_blank"><i class="fab fa-whatsapp"></i> Open WhatsApp</a>
+                    <button class="btn" onclick="backToRegistration()" style="background:white; color:var(--primary); border:2px solid var(--primary); margin-top:20px; width:100%; padding:16px; border-radius:60px;"><i class="fas fa-arrow-left"></i> Back</button>
                 </div>
             </div>
 
             <div class="footer">
-                <p><strong>5 Years of Trust</strong> • 350+ Success Stories</p>
-                <p>Premium Jobs Community · Pan India</p>
+                <p>✔ 5 Years of Trust • 350+ Success Stories • 100% verified recruiters</p>
             </div>
+        </div>
+    </div>
+
+    <!-- floating smart assist (non‑AI, just quick actions) -->
+    <div class="smart-float">
+        <div class="float-btn whatsapp-float" onclick="window.open('https://wa.me/918208882326','_blank')"><i class="fab fa-whatsapp"></i></div>
+        <div class="float-btn" onclick="toggleQuickAssist()"><i class="fas fa-question"></i></div>
+    </div>
+    <div class="quick-assist" id="quickAssist">
+        <div class="assist-header"><i class="fas fa-bolt"></i> Quick help</div>
+        <div class="assist-options">
+            <div class="assist-option" onclick="copyUPI()"><i class="fas fa-copy"></i> Copy UPI ID</div>
+            <div class="assist-option" onclick="openGPay()"><i class="fab fa-google-pay"></i> Open GPay</div>
+            <div class="assist-option" onclick="window.location.href='tel:+918208882326'"><i class="fas fa-phone"></i> Call admin</div>
+            <div class="assist-option" onclick="toggleTheme()"><i class="fas fa-palette"></i> Switch theme</div>
         </div>
     </div>
 
@@ -667,15 +501,56 @@
         let userData = {};
         const ADMIN_NUMBER = '918208882326';
 
+        // theme
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const icon = document.getElementById('themeIcon');
+            if (document.body.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // smart profile score (rule based, not AI)
+        function updateScore() {
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const prof = document.getElementById('profession').value;
+
+            let score = 0;
+            if (name.length >= 3) score += 25;
+            if (email.includes('@') && email.includes('.')) score += 25;
+            if (phone.length === 10 && /^\d+$/.test(phone)) score += 25;
+            if (prof) score += 25;
+
+            document.getElementById('scoreCircle').innerText = score;
+            // update circle conic gradient (simple representation)
+            document.getElementById('scoreCircle').style.background = `conic-gradient(var(--primary) ${score*3.6}deg, #e0f2ef ${score*3.6}deg)`;
+
+            let advice = "";
+            if (score === 100) advice = "✅ Excellent! Your profile is complete. You're ready to proceed.";
+            else if (score >= 75) advice = "👍 Great, just one more step. Add missing detail.";
+            else if (score >= 50) advice = "📌 Half done. Fill all fields for best match.";
+            else advice = "📝 Fill your details to see profile strength.";
+            document.getElementById('scoreText').innerText = advice;
+        }
+
+        function toggleQuickAssist() {
+            document.getElementById('quickAssist').classList.toggle('show');
+        }
+
+        // payment and navigation (same as before)
         function showPayment() {
             const name = document.getElementById('fullName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const profession = document.getElementById('profession').value;
-
             if (!name || !email || !phone || !profession) { alert('Please fill all fields'); return; }
-            if (phone.length !== 10) { alert('Enter valid 10-digit number'); return; }
-
+            if (phone.length !== 10 || !/^\d+$/.test(phone)) { alert('Enter valid 10-digit number'); return; }
             userData = { name, email, phone, profession };
             document.getElementById('registrationSection').classList.add('hidden');
             document.getElementById('paymentSection').classList.remove('hidden');
@@ -690,28 +565,20 @@
 
         function copyUPI() {
             navigator.clipboard.writeText('8208882326@axisbank').then(() => {
-                alert('✅ UPI ID copied!\n\n8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
+                alert('✅ UPI ID copied: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal');
             });
         }
 
-        function openUPIApp() { window.location.href = 'upi://pay?pa=8208882326@axisbank'; }
-        function openGPay() { window.location.href = 'tez://upi/pay?pa=8208882326@axisbank'; }
-        function openPhonePe() { window.location.href = 'phonepe://pay?pa=8208882326@axisbank'; }
-        function openPaytm() { window.location.href = 'paytmmp://pay?pa=8208882326@axisbank'; }
-
-        function toggleHelp() {
-            const content = document.getElementById('helpContent');
-            const icon = document.getElementById('helpIcon');
-            content.classList.toggle('show');
-            icon.classList.toggle('fa-chevron-down');
-            icon.classList.toggle('fa-chevron-up');
-        }
+        function openUPIApp() { window.location.href = 'upi://pay?pa=8208882326@axisbank&pn=Mahesh%20Nirmal&am=249&cu=INR'; }
+        function openGPay() { window.location.href = 'tez://upi/pay?pa=8208882326@axisbank&pn=Mahesh%20Nirmal&am=249&tn=Premium%20IT%20MBA'; }
+        function openPhonePe() { window.location.href = 'phonepe://pay?pa=8208882326@axisbank&pn=Mahesh%20Nirmal&am=249'; }
+        function openPaytm() { window.location.href = 'paytmmp://pay?pa=8208882326@axisbank&pn=Mahesh%20Nirmal&am=249'; }
 
         function contactAdmin(context) {
             if (!userData.name) { alert('Please complete registration first'); return; }
             let message = context === 'payment_link' 
-                ? `Hello, I want to join Premium Jobs Community.\n\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nPlease send payment link for ₹249.`
-                : `Hello, I've completed payment ₹249.\n\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Premium IT MBA\n\n✅ Payment done!\n📸 Screenshot attached.\n\nPlease add me to premium group.`;
+                ? `Hello, I want to join Premium Pan India IT & Non-IT WhatsApp Job group.\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nPlease send payment link for ₹249.`
+                : `Hello, I've completed payment ₹249.\nName: ${userData.name}\nEmail: ${userData.email}\nPhone: ${userData.phone}\n\nUPI ID: 8208882326@axisbank\nAmount: ₹249\nPayee: Mahesh Nirmal\nRemark: Premium IT MBA\n✅ Payment done, screenshot attached.\nPlease add me to premium group.`;
             window.open(`https://wa.me/${ADMIN_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
         }
 
@@ -722,13 +589,13 @@
             document.getElementById('confirmationSection').classList.remove('hidden');
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        window.onload = function() {
             document.getElementById('fullName').value = '';
             document.getElementById('email').value = '';
             document.getElementById('phone').value = '';
             document.getElementById('profession').value = '';
-            document.getElementById('helpContent').classList.remove('show');
-        });
+            updateScore();
+        };
     </script>
 </body>
 </html>
